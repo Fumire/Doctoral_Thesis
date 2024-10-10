@@ -29,6 +29,8 @@
 \usepackage{tocloft}
 \usepackage{pdfpages}
 
+\usepackage[notocbib]{apacite}
+
 \renewcommand\cftsecafterpnum{\vskip15pt}
 \renewcommand\cftsubsecafterpnum{\vskip15pt}
 \renewcommand\cftfigafterpnum{\vskip15pt}
@@ -36,6 +38,7 @@
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 \renewcommand{\contentsname}{\hfill\bfseries\Large Contents\hfill}
 \renewcommand{\listfigurename}{\hfill\bfseries\Large List of Figures\hfill}
+\renewcommand{\listtablename}{\hfill\bfseries\Large List of Tables\hfill}
 \renewcommand{\thefigure}{\arabic{figure}}
 \newcommand{\qed}{\hfill\blacksquare}
 \renewcommand{\bibname}{\hfill\bfseries\Large References \hfill\hfill}
@@ -65,25 +68,20 @@
 % Do not touch the above 70 lines
 
 \begin{document}
-
 % Front cover
     \begin{center}
     \LARGE Doctoral Thesis
 
     \vspace{3cm}
-    \huge <Title>
-    % Great Work That None Can Do Except Me
+    \huge \input{Documents/Title.txt}
 
     \vfill
 
-    \LARGE Jaewoong Lee
+    \LARGE \input{Documents/Name.txt}
 
     \vspace{2cm}
 
-    \LARGE Department of Biomedical Engineering
-
-    \LARGE (<Your major>)
-    % (Check your major. Write only if your major name is different from your department(school))
+    \LARGE \input{Documents/Department.txt}
 
     \vspace{2cm}
 
@@ -102,21 +100,16 @@
 
     \hbox{ }
 
-    \huge <Title>
-    % Great Work That None Can Do Except Me
+    \huge \input{Documents/Title.txt}
 
     \vspace{5cm}
 
-    \LARGE <Your name>
+    \LARGE \input{Documents/Name.txt}
     % Gil Dong Hong
 
     \vspace{6cm}
 
-    \LARGE <Your department>
-    % Department of Computer Science and Engineering
-
-    \LARGE (<Your major>)
-    % Check your major. Write only if your major name is different from your department(school)
+    \LARGE \input{Documents/Department.txt}
 
     \vspace{2cm}
 
@@ -129,19 +122,18 @@
 % Thesis approval
 % Add the approval doc signed by your advisor in a PDF file
 % Put your pdf with the filename below, and uncomment it.
-    \includepdf[fitpaper= true, pages=-]{Documents/example.pdf}
+\includepdf[fitpaper= true, pages=-]{Documents/example.pdf}
 
 % [Confirmation of thesis approval]
 % add the certificate signed by your committee in a PDF file
 % Put your pdf with the filename below, and uncomment it.
-    \includepdf[fitpaper= true, pages=-]{Documents/example.pdf}
+\includepdf[fitpaper= true, pages=-]{Documents/example.pdf}
 
 % Abstract
     \begin{abstract}
     Your abstract should be here. \vfill
     \end{abstract}
-
-\clearpage
+    \clearpage
 
 % Do not touch the below 20 lines
 \hbox{ }
@@ -159,16 +151,21 @@
 \thispagestyle{empty}
 \clearpage
 
+%%% List of Tables
+\listoftables{}
+\thispagestyle{empty}
+\clearpage
+
 %%% reset page numbering
 \setcounter{page}{1}
 %  Do not touch the above 20 lines
 
-    \section*{List of abbreviations}
+    \section*{List of Abbreviations}
     \newpage
 
     \section{Introduction}
 
-        Your introduction should be here. You may need a reference~\cite{ref_sample}.
+        Your introduction should be here. You may need a reference ~\cite{sample}.
     \newpage
 
     \section{Second section}
@@ -185,10 +182,16 @@
         Fig.~\ref{fig:myfigure} is a sample figure.
 
         \begin{figure}[h]
-        \centering
-        \includegraphics[width=12 cm]{Figures/myfigure.pdf}
-        \caption{My figure.} \label{fig:myfigure}
+            \centering
+            \includegraphics[width=12 cm]{Figures/myfigure.pdf}
+            \caption{My figure.}
+            \label{fig:myfigure}
         \end{figure}
+
+        \begin{table}[h]
+            \caption{My Table.}
+            \label{tab:mytable}
+        \end{table}
     \newpage
 
     \section{Third section}
@@ -196,7 +199,6 @@
 
         \subsection{First subsection}
             This is the first subsection.
-
 
             \begin{algorithm}
             	\caption{My Algorithm.} \label{algo:myalgo}
@@ -224,8 +226,8 @@
 
 % Reference
     \addcontentsline{toc}{section}{References}
-    \bibliographystyle{IEEEtran}
-    \bibliography{sample.bib}
+    \bibliographystyle{apacite}
+    \bibliography{references.bib}
     \clearpage
 
 
