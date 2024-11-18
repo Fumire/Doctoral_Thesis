@@ -32,8 +32,9 @@
 \usepackage{acro}
 \usepackage[notocbib]{apacite}
 \usepackage{kotex}
+\usepackage{microtype}
 \setcounter{secnumdepth}{5}
-%\setcounter{tocdepth}{5}
+\setcounter{tocdepth}{5}
 
 \input{Documents/abbreviations.tex}
 
@@ -90,7 +91,7 @@
 
     \vspace{2cm}
 
-    \LARGE Ulsan National Institute of Science and Technology
+    \LARGE \input{Documents/UNIST.txt}
     \vspace{2cm}
 
     \LARGE \the\year{}
@@ -117,7 +118,7 @@
 
     \vspace{2cm}
 
-    \LARGE Ulsan National Institute of Science and Technology
+    \LARGE \input{Documents/UNIST.txt}
 
     \end{center}
     \thispagestyle{empty}
@@ -135,7 +136,22 @@
 
 % Abstract
     \begin{abstract}
-    Your abstract should be here. \vfill
+        The microbiome refers to the complex community of microorganisms, including bacteria, viruses, fungi, and other microbes, that inhabit various environment within living organisms \cite{microbiome-1, microbiome-3}. In humans, the microbiome plays a crucial role in maintaining health \cite{microbiome-2}, influencing processes such as digestion \cite{microbiome-digestion-1}, immune response \cite{microbiome-immune-1, microbiome-immune-2, microbiome-immune-3}, and even mental health \cite{microbiome-mental-1, microbiome-mental-2, microbiome-mental-3}. These microbial communities are not static nor constant but rather dynamic ecosystem that interact with their host and respond to environmental changes. Recent studies have revealed that imbalances in the microbiome, known as dysbiosis, can contribute to a wide range of diseases, including obesity \cite{microbiome-obesity-1, microbiome-obesity-2, microbiome-obesity-3}, diabetes \cite{microbiome-diabetes-1, microbiome-diabetes-2, microbiome-diabetes-3}, infections \cite{microbiome-infection-1, microbiome-infection-2}, inflammatory conditions \cite{microbiome-inflammation-1, microbiome-inflammation-2, microbiome-inflammation-3}, and cancers \cite{microbiome-cancer-1, microbiome-cancer-2, microbiome-cancer-3, microbiome-cancer-4}. Thus, understanding the composition of the human microbiome is essential for developing new therapeutic approaches that target these microbial populations to promote health and prevent diseases.
+
+        (PTB)
+
+        (Periodontitis)
+
+        (Lung)
+
+        (Conclusion)
+
+        \vfill
+        \noindent\rule{\linewidth}{0.4pt}
+        \textbf{This doctoral dissertation is an addition based on the following papers that the author has already published}:
+        \begin{itemize}
+            \item \input{Documents/PTB.txt} \nocite{PTB-JW-1}
+        \end{itemize}
     \end{abstract}
     \clearpage
 
@@ -168,28 +184,10 @@
     \printacronyms[display=all, heading=none]
     \newpage
 
-    \section{Abstract}
-        The microbiome refers to the complex community of microorganisms, including bacteria, viruses, fungi, and other microbes, that inhabit various environment within living organisms \cite{microbiome-1, microbiome-3}. In humans, the microbiome plays a crucial role in maintaining health \cite{microbiome-2}, influencing processes such as digestion \cite{microbiome-digestion-1}, immune response \cite{microbiome-immune-1, microbiome-immune-2, microbiome-immune-3}, and even mental health \cite{microbiome-mental-1, microbiome-mental-2, microbiome-mental-3}. These microbial communities are not static nor constant but rather dynamic ecosystem that interact with their host and respond to environmental changes. Recent studies have revealed that imbalances in the microbiome, known as dysbiosis, can contribute to a wide range of diseases, including obesity \cite{microbiome-obesity-1, microbiome-obesity-2, microbiome-obesity-3}, diabetes \cite{microbiome-diabetes-1, microbiome-diabetes-2, microbiome-diabetes-3}, infections \cite{microbiome-infection-1, microbiome-infection-2}, inflammatory conditions \cite{microbiome-inflammation-1, microbiome-inflammation-2, microbiome-inflammation-3}, and cancers \cite{microbiome-cancer-1, microbiome-cancer-2, microbiome-cancer-3, microbiome-cancer-4}. Thus, understanding the composition of the microbiome is essential for developing new therapeutic approaches that target these microbial populations to promote health and prevent diseases.
-
-        (PTB)
-
-        (Periodontitis)
-
-        (Lung)
-
-        (Conclusion)
-
-        \vspace{3 cm}
-        \textbf{This doctoral dissertation is an addition based on the following papers that the author has already published:}
-        \begin{itemize}
-            \item \input{Documents/PTB.txt} \nocite{PTB-JW-1}
-        \end{itemize}
-    \newpage
-
     \section{Predicting preterm birth using machine learning techniques in oral microbiome}
         \label{section:PTB}
 
-        \textbf{This section includes the published contents:} \\
+        \textbf{This section includes the published contents}: \\
         \input{Documents/PTB.txt} \nocite{PTB-JW-1}
 
         \subsection{Introduction}
@@ -201,36 +199,36 @@
 
             However, as anti-inflammatory and antibiotic therapies were insufficient to lower PTB occurrence rates, the mechanism of PTB cannot be completely explained by inflammatory and infectious pathways. It has been hypothesized that the microbiota linked to PTB originate from either a hematogenous pathway or the female genitourinary tract increasing through the vagina and/or cervix. \cite{PTB-mechanism-3}. Vaginal microbiome compositions have been found in women who eventually acquire PTB, and recent studies have tried to predict PTB risk using cervicovaginal fluid \cite{PTB-mechanism-4}. Even though previous investigation have confirmed the potential relationships between the vaginal microbiome compositions and PTB, these studies are only able to clarify an upward trajectory.
 
-            Decades of epidemiological research studies have suggested that periodontitis is an independent risk factor for various adverse birth outcomes, including PTB \cite{PTB-mechanism-5}. Based on these precedents, it is expected that the oral microbiome can explain another hematogenous route. However, prenatal oral microbiome is not well understood.
+            Multiple unfavorable birth outcomes, including PROM and PTB, have been linked to periodontitis as an independence risk factor, according to numerous epidemiological researches \cite{PTB-mechanism-5}. It is expected that the oral microbiome will be able to explain additional hematogenous pathways in light of these precedents; however, the oral microbiome composition of fetuses is limited understood.
 
-            Thus, this study aimed to compare oral microbiome compositions between a PTB group and a full-term birth group, to identify oral microbiome associated with PTB, and to develop a machine learning prediction model of PTB based on oral microbiome compositions.
+            Hence, in order to identify the salivary microbiome linked to PTB and to establish a machine learning prediction model of PTB determined by oral microbiome compositions, this study examined the salivary microbiome compositions of PTB study participants with a full-term birth (FTB) study participants.
         \newpage
 
         \subsection{Materials and methods}
             \subsubsection{Study design and participants}
-                This study was conducted on singleton pregnant women admitted for delivery at Jeonbuk National University Hospital between 2019 and 2021. This study received approval from the Ethical Research Committee (IRB file No. 2019-01-024). All participants provided written informed consent. Eligible participants included women admitted for induction delivery, elective cesarean section, and those who were hospitalized due to symptoms of preterm labor or preterm pre-labor rupture of membranes.
+                Between 2019 and 2021, singleton pregnant women who received treatment to Jeonbuk National University Hospital for childbirth were the participants of this study. The Ethical Research Committee authorized this study (IRB file No. 2019-01-024). Written informed authorization was acquired with preterm labor or PROM, as well as those admitted for induction birth or elective cesarean sections (C-sections), were eligible participants.
 
             \subsubsection{Data collection and grouping}
-                Data on current and historical pregnancy outcomes were collected from questionnaires and electronic medical records. This information encompassed demographic factors (gestational age, birth weight, sex) and maternal risk factors (maternal age at delivery, cesarean section, preterm pre-labor rupture of membranes, previous preterm delivery history, gestational or overt diabetes mellitus, pregnancy-induced or chronic hypertension, and pre-pregnancy overweight or gestational weight gain). All subjects were divided into a PTB group or a full-term birth (FTB) group, with PTB defined as delivery before 37 weeks of gestation.
+                Questionnaires and electronic medical records were implemented to gather information on both previous and current pregnancy outcomes. These data included maternal risk factors, including maternal age at delivery, C-section, PROM, prior history of PTB, gestational or overt diabetes mellitus, pregnancy-induced or chronic hypertension, pre-pregnancy overweight and/or gestational weight gain, along with demographic factors, namely gestational age, birth weight, and sex.
 
             \subsubsection{Oral microbiome sample collection}
-                Oral microbiome samples were collected using mouthwash within 24 h before delivery. Standard sterile techniques were employed. Medical staff supervised all sample collection procedures. Participants were instructed to avoid brushing their teeth, eating, or drinking 30 min before sampling. Saliva samples were obtained by rinsing the mouth with 12 mL of a gargle solution (E-zen Gargle, JN Pharm, Pyeongtaek, Korea) for 30 s. Sample were labeled with the subject’s anonymous ID and stored at 4 °C until further processing. The resuspended sample was transferred to a microcentrifuge tube. Genomic DNA was extracted using an ExgeneTM Clinic SV kit (GeneAll Biotechnology, Seoul, Korea) according to the manufacturer’s instructions and stored at -20 \textcelsius.
+                Using mouthwash, salivary microbiota samples were obtained 24 hours before to delivery. Standard sterilization techniques were used. All sample collection processes were overseen by medical professionals. Thirty minutes prior to sampling, participants were cautioned not to eat, drink, or brush their teeth. By rinsing the mouth for 30 seconds with 12 mL of a gargle solution (E-zen Gargle, JN Pharm, Pyeongtaek, Korea), saliva samples were gathered. Before going through futher processing, the samples were stored at 4 \textcelsius and labeled with the subject's anonymous ID. A microcentrifuge tube was filled with the reconstituted sample. Following the instruction from the manufacturer, genomic DNA was extracted using an ExgeneTM Clinic SV kit (GeneAll Biotechnology, Seoul, Korea) and kept at -20 \textcelsius.
 
             \subsubsection{16s rRNA gene sequencing and taxonomy assignment}
-                Specimens were sent to Department of Biomedical Engineering, Ulsan National Institute of Science and Technology for taxonomy assignment. Then 16S rRNA sequencing was performed using an Illumina MiSeq Reagent Kit v3 (Illumina, San Diego, CA, USA) commissioned by Macrogen (Macrogen, Seoul, Korea). Library protocols for amplifying V3 and V4 regions were used. Pooled library was sequenced using a v3 600 cycle chemistry after diluting the sample to a final concentration of 6 pM with 20\% PhiX control to generate 300 bp paired end reads.
+                For taxonomic assignment, specimens were transported to \input{Documents/Department.txt} of \input{Documents/UNIST.txt}. Afterward, using an Illumina MiSeq Reagent Kit v3 (Illumina, San Diego, CA, USA) commissioned, 16S rRNA sequencing was performed. The V3 and V4 regions were amplified using library methods. After diluting the samples to a final concentration of 6 pM with 20\% PhiX control, the pooled library was sequenced using a v3 600 cycle chemistry to generated 300 base-pair paired end reads.
 
             \subsubsection{Bioinformatics and statistical analysis}
-                Independent t-test and chi-square test were used to compare differences between the PTB group and the FTB group. SPSS (version 20.0) was used for all data analyses \cite{SPSS-1}. Statistical significance was considered at $p < 0.05$.
+                To analyze differences between the PTB participants and the FTB participants, independent $t$-test and $\chi$-square test were implemented. SPSS (version 20.0) was used for clinical measurement comparisons \cite{SPSS-1}. Statistical significance was considered at $p < 0.05$.
 
-                16S rRNA sequences from study subjects were imported with QIIME2 (version 2022.2) for further processing \cite{QIIME2-1}. Sequences were filtered with DADA2 \cite{DADA2-1}. Amplicon sequence variants (ASV) were assigned taxonomy with the Human Oral Microbiome Database (version 15.22) \cite{HOMD-1}. To measure richness of microbiomes, two diversity indices were calculated. Alpha diversity, a measure of species within a particular community, was calculated using the Faith’s phylogenetic diversity (Faith PD) index within the QIIME2 platform. Communities numerically dominated by a few species will exhibit a low Faith PD index, whereas communities in which abundance is distributed equally among species will exhibit a high evenness. Mann–Whitney–Wilcoxon test was used to find statistically significant differences in Faith PD index. Beta diversity measures dissimilarity between pairs of communities. It was calculated using the Hamming diversity index. PERMANOVA multivariate test was used to calculate statistically significant differences in the Hamming diversity index.
+                16S rRNA sequences from the salivary samples of study participants were imported with QIIME2 (version 2022.2) for further bioinformatics processing \cite{QIIME2-1}. DADA2 was implemented to check qualities of sequences and to filter low-quality sequences \cite{DADA2-1}. Amplicon sequence variants (ASV) were assigned taxonomy with HOMD (version 15.22) \cite{HOMD-1}. Alpha diversity, a measure of species within a single microbiome community, was calculated using the Faith’s phylogenetic diversity (Faith PD) index \cite{FaithPD-1}. Communities numerically dominated by a few species will exhibit a low Faith PD index, whereas communities in which abundance is distributed equally among species will exhibit a high evenness. Mann–Whitney–Wilcoxon $U$-test was used to estimate statistically significant differences in Faith PD index. Beta diversity measures dissimilarity between pairs of communities. It was calculated using the Hamming diversity index \cite{Hamming-1}. PERMANOVA multivariate test was performed to calculate statistically significant differences in the Hamming diversity index \cite{PERMANOVA-1, PERMANOVA-2}.
 
-                To identify differentially abundant taxa (DAT) with distinct abundance differences between the PTB group and the FTB group, DESeq2 was implemented using \texttt{DESeqDataSetFromMatrix} method as described in the package tutorial \cite{DESeq2-1}. Taxa with $| \log _2 \textrm{FoldChange} |$ $>$ 1 and adjusted $p < 0.05$ are considered as significant different.
+                To identify differentially abundant taxa (DAT) that have statistically significant differences between the PTB participants and the FTB participants, DESeq2 was implemented using \texttt{DESeqDataSetFromMatrix} method as described in the package tutorial \cite{DESeq2-1}. Taxa with $| \log _2 \textrm{FoldChange} |$ $>$ 1 and adjusted $p < 0.05$ are considered as DAT.
 
             \subsubsection{Machine learning prediction model development}
                 Following qualitative and quantitative analyses of associations between the PTB group and each bacterium, a random forest classifier was used to find the criteria to predict PTB with oral microbiome data. Random forest classification is an ensemble machine learning algorithm that summarizes many decision trees to improve classification evaluations and robustness \cite{RF-1}. Random forest classifier was implemented to predict PTB based on oral microbiome compositions. To assure consistence and reliable classification results \cite{Kfold-1}, we performed stratified $k$-fold cross-validation ($k=5$). Moreover, to decide the best features that could maximize classification evaluations, we performed random forest classification evaluations only with some DAT selected by their importances. Evaluations for classification included accuracy (ACC), balanced accuracy (BA), precision (PRE), sensitivity (SEN), and specificity (SPE).
 
             \subsubsection{Ethics approval and consent to participate}
-                The research protocol was approved by the Institutional Review Board of Jeonbuk National University Hospital (No. 2019-01-024) and was performed according to the Declaration of Helsinki \cite{Helsinki-1}.
+                The study was approved by the Institutional Review Board of Jeonbuk National University Hospital (IRB No. 2019-01-024) and was performed according to the Declaration of Helsinki \cite{Helsinki-1}.
         \newpage
 
         \subsection{Results}
@@ -238,14 +236,14 @@
                 In this study, a total of 69 volunteer mothers were initially recruited. However, one participant with incomplete data and nine individuals with twin pregnancies were excluded from the study cohort. As a result, 59 women (30 in the PTB group and 29 in the FTB group) were included in the final analysis. Demographic and clinical characteristics of subjects in the PTB group and the FTB group are summarized in Table \ref{tab:PTB-clinical}. Because PROM is a major cause of preterm birth, it was significantly higher in PTB group. There was no significant difference in other maternal clinical characteristics between the PTB group and the FTB group. There were no cases with a history of smoking or concurrent periodontal disease in both groups.
 
             \subsubsection{Comparison of oral microbiomes}
-                The oral microbiome comprised 13,953,804 sequences from 59 oral microbiome samples, with 102,305.95 $\pm$ 19,095.60 and 64,823.41 $\pm$ 15,841.65 reads per sample before and after filtering low-quality reads and trimming extra-long tails, respectively. After filtering low-quality reads and trimming extra-long tails, remaining representative reads were clustered in ASVs with their exact sequence match. There were no significant differences in measures of alpha diversity (Faith PD) and beta diversity (Hamming distance) indices for samples between the PTB group and the FTB group (Figure \ref{fig:PTB-diversity}).
+                The oral microbiome comprised 13953804 sequences from 59 salivary samples, with 102305.95$\pm$19095.60 and 64823.41$\pm$15841.65 reads per sample before and after filtering low-quality reads and trimming extra-long tails, respectively. After filtering low-quality reads and trimming extra-long tails, remaining representative reads were clustered in ASVs with their exact sequence match. There were no significant differences in measures of alpha diversity (Faith PD) and beta diversity (Hamming distance) indices for samples between the PTB group and the FTB group (Figure \ref{fig:PTB-diversity}).
 
                 Of 465 genera and species analyzed, 32 DAT between the PTB group and the FTB group were selected by DESeq2 \cite{DESeq2-1}, including 26 FTB-enriched DAT and six PTB-enriched DAT. In order to mitigate the confounding effect of PROM, we excluded 7 PROM-related DATs from these 32 DAT (Figure \ref{fig:PTB-volcano}). There were a total of 25 DATs between the PTB group and the FTB group, with 22 DATs enriched in the FTB group and three in the PTB group, as depicted in Figure \ref{fig:PTB-DAT}.
 
                 Figure \ref{fig:PTB-composition} displays DAT volcano plot in the oral microbiome sorted by differences between FTB-enriched DAT and PTB-enriched DAT proportions, indicating a decrease in gestational age for FTB-enriched DAT proportions. Pearson correlation analysis revealed a strong negative correlation ($r = -0.542$ and $p = 7.8\textrm{e}-6$) between gestational age and difference between PTB-enriched DAT and FTB-enriched DAT proportions.
 
             \subsubsection{Random forest classification}
-                Random forest classifiers were established to classify PTB based on DAT. The best BA(0.765 $\pm$ 0.071) was achieved using the nine most important taxa (Figure \ref{fig:PTB-ML}a). The Random forest model calculated the importance of each DAT (Figure \ref{fig:PTB-ML}b). Overall ACC, PRE, SEN, and SPE were 0.714 $\pm$ 0.061, 0.700 $\pm$ 0.194, 0.728 $\pm$ 0.058, and 0.743 $\pm$ 0.138, respectively. To validate the performance of our machine learning prediction model, we conducted a validation test on nine twin pregnancies that were excluded from the paper (Figure \ref{fig:PTB-validation}). On PTB subjects of these twin samples, the machine learning classifications have 87.5\% accuracy, comparable to the machine learning classification on the singleton study subjects.
+                Random forest classifiers were established to classify PTB based on DAT. The best BA(0.765 $\pm$ 0.071) was achieved using the nine most important taxa (Figure \ref{fig:PTB-ML}a). The Random forest model calculated the importance of each DAT (Figure \ref{fig:PTB-ML}b). Overall ACC, PRE, SEN, and SPE were 0.714$\pm$0.061, 0.700$\pm$0.194, 0.728$\pm$0.058, and 0.743 $\pm$ 0.138, respectively. To validate the performance of our machine learning prediction model, we conducted a validation test on nine twin pregnancies that were excluded from the paper (Figure \ref{fig:PTB-validation}). On PTB subjects of these twin samples, the machine learning classifications have 87.5\% accuracy, comparable to the machine learning classification on the singleton study subjects.
 
             \begin{table}[p]
                 \centering
@@ -266,7 +264,7 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=15 cm]{Figures/PTB/Fig2-Composition.pdf}
-                \caption[Oral microbiome compositions over DAT]{\textbf{Oral microbiome compositions over DAT}. \textbf{(a)} Proportions of DAT of study subjects. Samples are sorted by difference between PTB-enriched DAT proportion and FTB-enriched DAT proportion. GA of samples are shown, matched with order of upper panel. PTB: red bar, FTB: green bar. PROM: arrow head. \textbf{(b)} Correlation plot with GA and difference between PTB-enriched DAT proportion and FTB-enriched DAT proportion. Pearson correlation shows strong negative coefficient ($r = -0.542$ and $p = 7.8e-06$) between GA and difference between PTB-enriched DAT proportion and FTB-enriched DAT proportion.}
+                \caption[Oral microbiome compositions over DAT]{\textbf{Oral microbiome compositions over DAT}. \textbf{(a)} Proportions of DAT of study subjects. Samples are sorted by difference between PTB-enriched DAT proportion and FTB-enriched DAT proportion. GA of samples are shown, matched with order of upper panel. PTB: red bar, FTB: green bar. PROM: arrow head. \textbf{(b)} Correlation plot with GA and difference between PTB-enriched DAT proportion and FTB-enriched DAT proportion. Pearson correlation shows strong negative coefficient ($r = -0.542$ and $p = 7.8\textrm{e}-06$) between GA and difference between PTB-enriched DAT proportion and FTB-enriched DAT proportion.}
                 \label{fig:PTB-composition}
             \end{figure}
             \clearpage
@@ -274,7 +272,7 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=15 cm]{Figures/PTB/Fig3-ML.pdf}
-                \caption[Machine learning evaluations over DAT]{\textbf{Machine learning evaluations over DAT}. \textbf{(a)} Machine learning evaluation upon number of features (DAT). Random Forest classifier has the best balanced accuracy (mean $\pm$ standard deviation.; 0.765 $\pm$ 0.071) with the nine most important DAT. \textbf{(b)} Importance of DAT is shown. Note that 0 $\le$ importance $\le$ 1, and $\sum$ importance $=$ 1. The 20 most important DAT that give the best balanced accuracy is marked with blue.}
+                \caption[Machine learning evaluations over DAT]{\textbf{Machine learning evaluations over DAT}. \textbf{(a)} Machine learning evaluation upon number of features (DAT). Random Forest classifier has the best balanced accuracy (mean $\pm$ standard deviation.; 0.765 $\pm$ 0.071) with the nine most important DAT. \textbf{(b)} Importance of DAT is shown. Note that $0 \le \textrm{importance} \le 1$, and $\sum \textrm{importance} =$ 1. The 20 most important DAT that give the best balanced accuracy is marked with blue.}
                 \label{fig:PTB-ML}
             \end{figure}
             \clearpage
@@ -305,7 +303,7 @@
         \newpage
 
         \subsection{Discussion}
-            In this study, we developed a method for predicting PTB based on random forest classifier using oral microbiome compositions. Recently, several sporadic reports have suggested a bidirectional relationship between oral microbiome and pregnancy \cite{PTB-mechanism-3}. However, prenatal oral microbiome is not well understood yet. Some research has shown that oral microbial dysbiosis combined with gingival inflammation can lead to adverse pregnancy  outcomes, including low birth weight, PTB, pre-eclampsia, and miscarriages \cite{PTB-mechanism-6}. Nevertheless, these results have been inconsistent due to methodologies employed in studies that only target known pathogens.
+            In this study, we developed a method for predicting PTB based on random forest classifier using salivary microbiome compositions. Recently, several sporadic reports have suggested a bidirectional relationship between oral microbiome and pregnancy \cite{PTB-mechanism-3}. However, prenatal oral microbiome is not well understood yet. Some research has shown that oral microbial dysbiosis combined with gingival inflammation can lead to adverse pregnancy  outcomes, including low birth weight, PTB, pre-eclampsia, and miscarriages \cite{PTB-mechanism-6}. Nevertheless, these results have been inconsistent due to methodologies employed in studies that only target known pathogens.
 
             \textit{Fusobacterium nucleatum} is the most prevalent oral microbiome studied \cite{Fusobacterium-1, Fusobacterium-2, Fusobacterium-3}. \textit{Fusobacterium nucleatum} is a Gramnegative, anaerobic, filamentous oral microbiome. It is considered one of the most abundant species in the oral microbiome. It can also be isolated from vaginal microbiome \cite{PTB-mechanism-7, PTB-mechanism-8}. Intra-amniotic \textit{Fusobacterium nucleatu}m infection leading to PTB has been reported in human and animal studies \cite{Fusobacterium-4}. Other studies have shown that other oral pathogens including \textit{Porphyromonas gingivalis} and intrauterine \textit{Bergeyella} spp. can be isolated from the placenta of women who deliver prematurely \cite{Porphyromonas-1, Porphyromonas-2}. In the present study, although \textit{Bergeyella} spp. was overrepresented in the PTB group with PROM, it was excluded in the finally selected 25 DAT. Furthermore, \textit{Campylobacter gracilis} was one of the FTB-enriched DAT that can aid colonization by periodontal pathogens including \textit{Porpyhromonas gingivalis} in subgingival microbiome \cite{PTB-mechanism-9}. \textit{Lactobacillus gasseri }was also one of the FTB-enriched DAT. It is known that \textit{Lactobacillus gasseri} in vaginal microbiome can decrease early PTB risk \cite{PTB-mechanism-10, PTB-mechanism-11}.
 
