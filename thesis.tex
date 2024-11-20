@@ -195,9 +195,9 @@
 
             Prediction models that can be utilized as a foundation for intervention methods still have an unacceptable amount of classification evaluations, including accuracy, sensitivity, and specificity, despite a great awareness of the risk factors that trigger PTB \cite{PTB-prediction-1}. Several attempts have been made to predict PTB through integrating data such as human microbiome composition, inflammatory markers, and prior clinical data with predictive machine learning methods \cite{PTB-prediction-2}. Because it is affordable and straightforward to use, fetal fibronectin is commonly used in medical applications. However, with a sensitivity of only 56\% that merely similar to random prediction, it has a low classification evaluation \cite{PTB-prediction-3}. Due to the difficulty and imprecision of the method in general, as well as the requirement for a qualified specialist cervical length measuring is also restricted \cite{PTB-prediction-4}.
 
-            Preterm labor and/or preterm pre-labor rupture of membranes (PROM) brought on by gestational inflammation and infection contribute to about 70\% of PTB cases \cite{PTB-prediction-5}. However, the mechanism of PTB cannot be fully explained by inflammatory and infectious pathways as anti-inflammatory and antibiotic treatments could not reduce PTB incidence rates \cite{PTB-mechanism-1}. With advancements in molecular genetic technology, studies on maternal microbiomes using 16S ribosomal RNA (rRNA) sequencing have emerged to explore unknown pathways of PTB \cite{PTB-mechanism-2}.
+            Preterm prelabor rupture of membranes (PROM) brought on by gestational inflammation and infection contribute to about 70\% of PTB cases \cite{PTB-prediction-5}. Nevertheless, as antibiotics and anti-inflammatory therapeutic strategies were ineffective to decrease PTB occurrence rates, the mechanism of PTB cannot be completely explained by inflammatory and infectious pathways \cite{PTB-mechanism-1}. Recent researches on maternal microbiomes were beginning to examine unidentified connections of PTB as a consequence of developmental processes in molecular biological technology \cite{PTB-mechanism-2}.
 
-            However, as anti-inflammatory and antibiotic therapies were insufficient to lower PTB occurrence rates, the mechanism of PTB cannot be completely explained by inflammatory and infectious pathways. It has been hypothesized that the microbiota linked to PTB originate from either a hematogenous pathway or the female genitourinary tract increasing through the vagina and/or cervix. \cite{PTB-mechanism-3}. Vaginal microbiome compositions have been found in women who eventually acquire PTB, and recent studies have tried to predict PTB risk using cervicovaginal fluid \cite{PTB-mechanism-4}. Even though previous investigation have confirmed the potential relationships between the vaginal microbiome compositions and PTB, these studies are only able to clarify an upward trajectory.
+            However, as anti-inflammatory and antibiotic therapies were insufficient to lower PTB occurrence rates, infectious and inflammatory processes are insufficient to exhaustively clarify the pathogenesis and pathophysiology of PTB. It has been hypothesized that the microbiota linked to PTB originate from either a hematogenous pathway or the female genitourinary tract increasing through the vagina and/or cervix. \cite{PTB-mechanism-3}. Vaginal microbiome compositions have been found in women who eventually acquire PTB, and recent studies have tried to predict PTB risk using cervicovaginal fluid \cite{PTB-mechanism-4}. Even though previous investigation have confirmed the potential relationships between the vaginal microbiome compositions and PTB, these studies are only able to clarify an upward trajectory.
 
             Multiple unfavorable birth outcomes, including PROM and PTB, have been linked to periodontitis as an independence risk factor, according to numerous epidemiological researches \cite{PTB-mechanism-5}. It is expected that the oral microbiome will be able to explain additional hematogenous pathways in light of these precedents; however, the oral microbiome composition of fetuses is limited understood.
 
@@ -205,11 +205,11 @@
         \newpage
 
         \subsection{Materials and methods}
-            \subsubsection{Study design and participants}
-                Between 2019 and 2021, singleton pregnant women who received treatment to Jeonbuk National University Hospital for childbirth were the participants of this study. The Ethical Research Committee authorized this study (IRB file No. 2019-01-024). Written informed authorization was acquired with preterm labor or PROM, as well as those admitted for induction birth or elective cesarean sections (C-sections), were eligible participants.
+            \subsubsection{Study design and study participants}
+                Between 2019 and 2021, singleton pregnant women who received treatment to Jeonbuk National University Hospital for childbirth were the participants of this study. This study was conducted according to the Declaration of Helsinki \cite{Helsinki-1}. The Institutional Review Board authorized this study (IRB file No. 2019-01-024). Written informed authorization was acquired with preterm labor or PROM, as well as those admitted for induction birth or elective cesarean sections (C-sections), were eligible participants.
 
-            \subsubsection{Data collection and grouping}
-                Questionnaires and electronic medical records were implemented to gather information on both previous and current pregnancy outcomes. These data included maternal risk factors, including maternal age at delivery, C-section, PROM, prior history of PTB, gestational or overt diabetes mellitus, pregnancy-induced or chronic hypertension, pre-pregnancy overweight and/or gestational weight gain, along with demographic factors, namely gestational age, birth weight, and sex.
+            \subsubsection{Clinical data collection and grouping}
+                Questionnaires and electronic medical records were implemented to gather information on both previous and current pregnancy outcomes. These clinical data included known risk factors, namely maternal age at delivery, diabetes mellitus (gestational or overt), hypertension (pregnancy-induced or chronic), overweight (pre-pregnancy or gestational weight gain), C-section, PROM, and history of PTB, along with demographic neonatal factors, such as gestational week on birth, weight, and sex.
 
             \subsubsection{Oral microbiome sample collection}
                 Using mouthwash, salivary microbiota samples were obtained 24 hours before to delivery. Standard sterilization techniques were used. All sample collection processes were overseen by medical professionals. Thirty minutes prior to sampling, participants were cautioned not to eat, drink, or brush their teeth. By rinsing the mouth for 30 seconds with 12 mL of a gargle solution (E-zen Gargle, JN Pharm, Pyeongtaek, Korea), saliva samples were gathered. Before going through futher processing, the samples were stored at 4 \textcelsius and labeled with the subject's anonymous ID. A microcentrifuge tube was filled with the reconstituted sample. Following the instruction from the manufacturer, genomic DNA was extracted using an ExgeneTM Clinic SV kit (GeneAll Biotechnology, Seoul, Korea) and kept at -20 \textcelsius.
@@ -226,9 +226,6 @@
 
             \subsubsection{Machine learning prediction model development}
                 Following qualitative and quantitative analyses of associations between the PTB group and each bacterium, a random forest classifier was used to find the criteria to predict PTB with oral microbiome data. Random forest classification is an ensemble machine learning algorithm that summarizes many decision trees to improve classification evaluations and robustness \cite{RF-1}. Random forest classifier was implemented to predict PTB based on oral microbiome compositions. To assure consistence and reliable classification results \cite{Kfold-1}, we performed stratified $k$-fold cross-validation ($k=5$). Moreover, to decide the best features that could maximize classification evaluations, we performed random forest classification evaluations only with some DAT selected by their importances. Evaluations for classification included accuracy (ACC), balanced accuracy (BA), precision (PRE), sensitivity (SEN), and specificity (SPE).
-
-            \subsubsection{Ethics approval and consent to participate}
-                The study was approved by the Institutional Review Board of Jeonbuk National University Hospital (IRB No. 2019-01-024) and was performed according to the Declaration of Helsinki \cite{Helsinki-1}.
         \newpage
 
         \subsection{Results}
@@ -248,7 +245,7 @@
             \begin{table}[p]
                 \centering
 
-                \caption[Baseline clinical characteristics of study subjects]{\textbf{Baseline clinical characteristics of study subjects}. Continuous variable: Mean $\pm$ standard deviation. Categorical variable: count (proprotion). Continuous variable for independent $t$-test. Categorical variable for Pearson’s $\chi$-square test.}
+                \caption[Standard clinical characteristics of study participants]{\textbf{Standard clinical characteristics of study participants}. Continuous variable are displayed as Mean$\pm$standard deviation. Categorical variable are displayed as count (proprotion). Continuous variable for independent $t$-test. Categorical variable for Pearson’s $\chi$-square test.}
                 \label{tab:PTB-clinical}
             \end{table}
             \clearpage
@@ -256,7 +253,7 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=12 cm]{Figures/PTB/Fig1-DAT.pdf}
-                \caption[DAT volcano plot]{\textbf{DAT volcano plot}. DAT volcano plot shows DAT, with PTB-enriched DAT shown as red dots and FTB-enriched DAT shown as green dots. Taxa with $| \log _2 \textrm{FoldChange} |$ $>$ 1 and adjusted $p < 0.05$ are considered as significant different.}
+                \caption[DAT volcano plot]{\textbf{DAT volcano plot}. PTB-enriched DAT shown as red dots and FTB-enriched DAT shown as green dots. Taxa with $| \log _2 \textrm{FoldChange} |$ $>$ 1 and $\textrm{adjusted-} p < 0.05$ are considered as significant different.}
                 \label{fig:PTB-DAT}
             \end{figure}
             \clearpage
@@ -398,14 +395,6 @@
                 \label{fig:Periodontitis-correlation2}
             \end{figure}
             \clearpage
-
-            \begin{figure}[p]
-                \centering
-                \includegraphics[width=12 cm]{Figures/Periodontitis/Figure_S4.pdf}
-                \caption[Random forest classification metrics from external datasets]{\textbf{Random forest classification metrics from external datasets}. The classification metrics in the random forest classification included accuracy (ACC), balanced accuracy (BA), F1 score (F1), precision (PRE), sensitivity (SEN), and specificity (SPE). Every classification metric ranges from $[0, 1]$, with higher values indicating better performance. \textbf{(a)} Classification performance for healthy vs. stage I vs. stage II vs. stage III. \textbf{(b)} Classification performance for healthy vs. stage I. \textbf{(c)} Classification performance for healthy vs. stage I vs. stages II/III. \textbf{(d)} Classification performance for healthy vs. stages I/II/III.}
-                \label{fig:Periodontitis-validation}
-            \end{figure}
-            \clearpage
         \newpage
 
         \subsection{Discussion}
@@ -450,7 +439,7 @@
     \section*{\hfill \Large Acknowledgments \hfill}
         I would like to disclose my earnest appreciation for my advisor, Professor Semin Lee, who provided solicitous supervision and cherished opportunities throughout the course of my research. His advice and consultation encouraged me to become as a researcher and to receive all humility and gentleness. I am also grateful to all of my committee members, Professor AAA, Professor BBB, Professor CCC, and Professor DDD, for their critical and meaningful mentions and suggestions.
 
-        I extend my deepest gratitude to my Lord, \textit{the Flying Spaghetti Monster}, His Noodly Appendage has guided me through the twist and turns of this academic journey. His presence, ever comforting and mysterious, has been a source of strength and humor during both highs and lows. In moments of doubt, I found solace in the belief that you were there, gently reminding me to keep fiath in the process. His Holy Noodle has nourished my mind, and for that, I am truly overwhelmed. May His Holy Noodle continue to guide me in all my future endeavors. R'Amen.
+        I extend my deepest gratitude to my Lord, \textit{the Flying Spaghetti Monster}, His Noodly Appendage has guided me through the twist and turns of this academic journey. His presence, ever comforting and mysterious, has been a source of strength and humor during both highs and lows. In moments of doubt, I found solace in the belief that you were there, gently reminding me to keep faith in the process. His Holy Noodle has nourished my mind, and for that, I am truly overwhelmed. May His Holy Noodle continue to guide me in all my future endeavors. R'Amen.
 
         (Professors)
 
