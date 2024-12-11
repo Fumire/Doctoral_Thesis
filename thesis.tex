@@ -136,11 +136,11 @@
 
 % Abstract
     \begin{abstract}
-        The microbiome refers to the complex community of microorganisms, including bacteria, viruses, fungi, and other microbes, that inhabit various environment within living organisms \cite{microbiome-1, microbiome-3}. In humans, the microbiome plays a crucial role in maintaining health \cite{microbiome-2}, influencing processes such as digestion \cite{microbiome-digestion-1}, immune response \cite{microbiome-immune-1, microbiome-immune-2, microbiome-immune-3}, and even mental health \cite{microbiome-mental-1, microbiome-mental-2, microbiome-mental-3}. These microbial communities are not static nor constant, but rather dynamic ecosystem that interacts with their host and respond to environmental changes. Recent studies have revealed that imbalances in the microbiome, known as dysbiosis, can contribute to a wide range of diseases, including obesity \cite{microbiome-obesity-1, microbiome-obesity-2, microbiome-obesity-3}, diabetes \cite{microbiome-diabetes-1, microbiome-diabetes-2, microbiome-diabetes-3}, infections \cite{microbiome-infection-1, microbiome-infection-2}, inflammatory conditions \cite{microbiome-inflammation-1, microbiome-inflammation-2, microbiome-inflammation-3}, and cancers \cite{microbiome-cancer-1, microbiome-cancer-2, microbiome-cancer-3, microbiome-cancer-4}. Thus, understanding the composition of the human microbiomes is essential for developing new therapeutic approaches that target these microbial populations to promote health and prevent diseases.
+        (Microbiome)
 
-        (PTB)
+        (PTB) Section \ref{section:PTB} introduces...
 
-        (Periodontitis)
+        (Periodontitis) Section \ref{section:Periodontitis} describes...
 
         (Lung)
 
@@ -185,6 +185,8 @@
     \newpage
 
     \section{Introduction}
+        The microbiome refers to the complex community of microorganisms, including bacteria, viruses, fungi, and other microbes, that inhabit various environment within living organisms \cite{microbiome-1, microbiome-3}. In humans, the microbiome plays a crucial role in maintaining health \cite{microbiome-2}, influencing processes such as digestion \cite{microbiome-digestion-1}, immune response \cite{microbiome-immune-1, microbiome-immune-2, microbiome-immune-3}, and even mental health \cite{microbiome-mental-1, microbiome-mental-2, microbiome-mental-3}. These microbial communities are not static nor constant, but rather dynamic ecosystem that interacts with their host and respond to environmental changes. Recent studies have revealed that imbalances in the microbiome, known as dysbiosis, can contribute to a wide range of diseases, including obesity \cite{microbiome-obesity-1, microbiome-obesity-2, microbiome-obesity-3}, diabetes \cite{microbiome-diabetes-1, microbiome-diabetes-2, microbiome-diabetes-3}, infections \cite{microbiome-infection-1, microbiome-infection-2}, inflammatory conditions \cite{microbiome-inflammation-1, microbiome-inflammation-2, microbiome-inflammation-3}, and cancers \cite{microbiome-cancer-1, microbiome-cancer-2, microbiome-cancer-3, microbiome-cancer-4}. Thus, understanding the composition of the human microbiomes is essential for developing new therapeutic approaches that target these microbial populations to promote health and prevent diseases.
+
         (Diversity indices)
 
         (Classification evaluation)
@@ -258,7 +260,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/PTB/Fig1-DAT.pdf}
-                \caption[DAT volcano plot]{\textbf{DAT volcano plot}. Red dots represent PTB-enriched DAT, while green dots represent FTB-enriched DAT.}
+                \caption[DAT volcano plot]{\textbf{DAT volcano plot}. \\
+                    Red dots represent PTB-enriched DAT, while green dots represent FTB-enriched DAT.}
                 \label{fig:PTB-DAT}
             \end{figure}
             \clearpage
@@ -266,7 +269,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/PTB/Fig2-Composition.pdf}
-                \caption[Salivary microbiome compositions over DAT]{\textbf{Salivary microbiome compositions over DAT}. \textbf{(a)} Frequencies of DAT of study subjects. The study participants are arranged in respect of $(\textrm{PTB-enriched DAT} - \textrm{FTB-enriched DAT})$. The study participants' GA is displayed in accordance with the upper panel's order (PTB: red bar, FTB: green bar. PROM: arrow head.) \textbf{(b)} Correlation plot with GA and $(\textrm{PTB-enriched DAT} - \textrm{FTB-enriched DAT})$. Strong negative correlation is found with Pearson correlation.}
+                \caption[Salivary microbiome compositions over DAT]{\textbf{Salivary microbiome compositions over DAT}. \\
+                    \textbf{(a)} Frequencies of DAT of study subjects. The study participants are arranged in respect of $(\textrm{PTB-enriched DAT} - \textrm{FTB-enriched DAT})$. The study participants' GA is displayed in accordance with the upper panel's order (PTB: red bar, FTB: green bar. PROM: arrow head.) \textbf{(b)} Correlation plot with GA and $(\textrm{PTB-enriched DAT} - \textrm{FTB-enriched DAT})$. Strong negative correlation is found with Pearson correlation.}
                 \label{fig:PTB-composition}
             \end{figure}
             \clearpage
@@ -340,6 +344,7 @@
             \subsubsection{Diversity indices reveal differences in diversity among the periodontal statuses}
             \subsubsection{Differentially abundant taxa among healthy and different periodontitis stages and their correlation}
             \subsubsection{Classification of periodontitis stages by random forest models}
+        \newpage
 
             \begin{table}[p]
                 \centering
@@ -367,7 +372,7 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_3.pdf}
-                \caption[Correlation heatmap]{\textbf{Correlation heatmap}. Pearson’s correlations between differentially abundant taxa in healthy status and periodontitis stages. Statistical significance was determined by strong correlation, i.e., $| \textrm{coefficient} | \ge 0.5$ (*).}
+                \caption[Correlation heatmap]{\textbf{Correlation heatmap}. Pearson's correlations between differentially abundant taxa in healthy status and periodontitis stages. Statistical significance was determined by strong correlation, i.e., $| \textrm{coefficient} | \ge 0.5$ (*).}
                 \label{fig:Periodontitis-correlation}
             \end{figure}
             \clearpage
@@ -423,7 +428,7 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_R03.pdf}
-                \caption[Number of read counts by the periodontitis statuses]{\textbf{Number of read counts by the periodontitis statuses}. Comparisons of the number of read counts among healthy controls and patients with various periodontitis stages. (a) Before quality check (b) After quality check. Statistical significance determined by the Mann-Whitney U-test: p > 0.05 (ns), p ≤ 0.001 (***), and p ≤ 0.0001 (****).}
+                \caption[Number of read counts by the periodontitis statuses]{\textbf{Number of read counts by the periodontitis statuses}. Comparisons of the number of read counts among healthy controls and patients with various periodontitis stages. (a) Before quality check (b) After quality check. Statistical significance determined by the Mann-Whitney U-test: $p > 0.05$ (ns), $p \le 0.001$ (***), and $p \le 0.0001$ (****).}
                 \label{fig:Periodontitis-QC}
             \end{figure}
             \clearpage
@@ -431,7 +436,7 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=0.9 \linewidth]{Figures/Periodontitis/Figure_R04.pdf}
-                \caption[Proportion of differentially abundant taxa]{\textbf{Proportion of differentially abundant taxa}. Proportions of differentially abundant taxa that were identified by ANCOM. (a) Actinomyces graevenitzii (b) Actinomyces spp. (c) Campylobacter showae (d) Corynebacterium durum (e) Filifactor alocis (f) Fretibacterium spp. (g) Lachnospiraceae [G-8] bacterium HMT 500 (h) Mycoplasma faucium (i) Peptostreptococcaceae [XI][G-5] saphenum (j) Peptostreptococcaceae [XI][G-6] nodatum (k) Peptostreptococcaceae [XI][G-9] brachy (l) Porphyromonas gingivalis (m) Porphyromonas sp. HMT 285 (n) Prevotella intermedia (o) Prevotella sp. HMT 304 (p) Prevotella sp. HMT 526 (q) Tannerella forsythia (r) Treponema putidum (s) Treponema sp. HMT 260 (t) Treponema spp. Statistical significance determined by the Mann-Whitney U-test: p > 0.05 (ns), p ≤ 0.05 (*), p ≤ 0.01 (**), p ≤ 0.001 (***), and p ≤ 0.0001 (****).}
+                \caption[Proportion of differentially abundant taxa]{\textbf{Proportion of differentially abundant taxa}. Proportions of differentially abundant taxa that were identified by ANCOM. (a) \textit{Actinomyces graevenitzii} (b) \textit{Actinomyces} spp. (c) \textit{Campylobacter showae} (d) \textit{Corynebacterium durum} (e) \textit{Filifactor alocis} (f) \textit{Fretibacterium} spp. (g) \textit{Lachnospiraceae [G-8] bacterium HMT 500} (h) \textit{Mycoplasma faucium} (i) \textit{Peptostreptococcaceae [XI][G-5] saphenum} (j) \textit{Peptostreptococcaceae [XI][G-6] nodatum} (k) \textit{Peptostreptococcaceae [XI][G-9] brachy} (l) \textit{Porphyromonas gingivalis} (m) \textit{Porphyromonas} sp. \textit{HMT 285} (n) \textit{Prevotella intermedia} (o) \textit{Prevotella} sp. \textit{HMT 304} (p) \textit{Prevotella} sp. \textit{HMT 526} (q) \textit{Tannerella forsythia} (r) \textit{Treponema putidum} (s) \textit{Treponema} sp. \textit{HMT 260} (t) \textit{Treponema} spp. Statistical significance determined by the Mann-Whitney U-test: $p > 0.05$ (ns), $p \le 0.05$ (*), $p \le 0.01$ (**), $p \le 0.001$ (***), and $p \le 0.0001$ (****).}
                 \label{fig:Periodontitis-proportions}
             \end{figure}
             \clearpage
@@ -478,18 +483,11 @@
         \clearpage
     \newpage
 
-    \section{General conclusion and future perspective}
+    \section{Conclusion}
         \label{section:conclusion}
-        \subsection{General conclusions}
-            In conclusion, the research described in this doctoral dissertation was conducted to identify significant ...
+        In conclusion, the research described in this doctoral dissertation was conducted to identify significant ...
 
-            In the Section \ref{section:PTB}, I show that
-        \newpage
-
-        \subsection{Plan for future}
-        \newpage
-
-        \subsection{Future perspective}
+        In the section \ref{section:PTB}, I show that
         \newpage
 
 % Reference
