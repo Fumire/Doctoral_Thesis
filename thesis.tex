@@ -192,7 +192,7 @@
         (Classification evaluation)
     \newpage
 
-    \section{Predicting preterm birth using machine learning techniques in oral microbiome}
+    \section{Predicting preterm birth using random forest classifier in salivary microbiome}
         \label{section:PTB}
 
         \textbf{This section includes the published contents}: \\
@@ -223,7 +223,7 @@
                 Salivary microbiome samples were collected 24 hours before to delivery using mouthwash. The standard methods of sterilizing were performed. Medical experts oversaw each stage of the sample collecting procedure. Participants received instruction not to eat, drink, or brush their teeth for 30 minutes before sampling salivary microbiome. Saliva samples were gathered by washing the mouth for 30 seconds with 12 mL of a mouthwash solution (E-zen Gargle, JN Pharm, Pyeongtaek, Korea). The samples were tagged with the anonymous ID for each participant and kept at 4 \textcelsius until they underwent further processing. Genomic DNA was extracted using an ExgeneTM Clinic SV kit (GeneAll Biotechnology, Seoul, Korea) following with the manufacturer instructions and store at -20 \textcelsius.
 
             \subsubsection{16s rRNA gene sequencing}
-                Salivary microbiome samples were transported to \input{Documents/Department.txt} of \input{Documents/UNIST.txt}. 16S rRNA sequencing was then carried out using a commissioned Illumina MiSeq Reagent Kit v3 (Illumina, San Diego, CA, USA). Library methods were utilized to amplify the V3-V4 areas. 300 base-pair paired end reads were produced by sequencing the pooled library using a v3 600 cycle chemistry after the samples had been diluted to a final concentration of 6 pM with a 20\% PhiX control.
+                Salivary microbiome samples were transported to the \input{Documents/Department.txt} of the \input{Documents/UNIST.txt}. 16S rRNA sequencing was then carried out using a commissioned Illumina MiSeq Reagent Kit v3 (Illumina, San Diego, CA, USA). Library methods were utilized to amplify the V3-V4 areas. 300 base-pair paired end reads were produced by sequencing the pooled library using a v3 600 cycle chemistry after the samples had been diluted to a final concentration of 6 pM with a 20\% PhiX control.
 
             \subsubsection{Bioinformatics analysis}
                 The independent $t$-test was utilized to evaluate the differences of continuous values between from the PTB participants than the FTB participants; $\chi$-square test was applied to decide statistical differences of categorical values. Clinical measurement comparisons were conducted using SPSS (version 20.0) \cite{SPSS-1}. At $p < 0.05$, statistical significance was taken into consideration.
@@ -237,7 +237,7 @@
 
         \subsection{Results}
             \subsubsection{Overview of clinical information}
-                In the beginning, 69 volunteer mothers were recruited for this study. However, due to insufficient clinical information or twin pregnancies, 10 participants were excluded from the study participants. Demographic and clinical information of the study participants are displayed in Table \ref{tab:PTB-clinical}. Because PROM is one of the leading factors of PTB, it was prevalent in the PTB group than the FTB group. Other maternal clinical factors did not significantly differ between the FTB and PTB groups. There were no cases in both groups that had a history of simultaneous periodontal disease or cigarette smoking.
+                In the beginning, 69 volunteer mothers were recruited for this study. However, due to insufficient clinical information or twin pregnancies, 10 participants were excluded from the study participants. Demographic and clinical information of the study participants are displayed in table \ref{tab:PTB-clinical}. Because PROM is one of the leading factors of PTB, it was prevalent in the PTB group than the FTB group. Other maternal clinical factors did not significantly differ between the FTB and PTB groups. There were no cases in both groups that had a history of simultaneous periodontal disease or cigarette smoking.
 
             \subsubsection{Comparison of salivary microbiomes composition}
                 The salivary microbiome composition was composed of 13953804 sequences from 59 study participants, with 102305.95$\pm$19095.60 and 64823.41$\pm$15841.65 (mean$\pm$SD) reads/sample before and following the quality-check stage, accordingly. There was not a significant distinction between the PTB and FTB groups with regard to on alpha diversity nor beta diversity metrics (Figure \ref{fig:PTB-diversity}).
@@ -251,8 +251,8 @@
 
             \begin{table}[p]
                 \centering
-
-                \caption[Standard clinical information of study participants]{\textbf{Standard clinical information of study participants}. Continuous variable for independent $t$-test. Categorical variable for Pearson’s $\chi$-square test. Continuous variable: mean$\pm$SD. Categorical vaiable: count (proprotion)}
+                \caption[Standard clinical information of study participants]{\textbf{Standard clinical information of study participants}. \\
+                    Continuous variable for independent $t$-test. Categorical variable for Pearson’s $\chi$-square test. Continuous variable: mean$\pm$SD. Categorical vaiable: count (proprotion)}
                 \label{tab:PTB-clinical}
             \end{table}
             \clearpage
@@ -278,7 +278,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/PTB/Fig3-ML.pdf}
-                \caption[Random forest-based PTB prediction model]{\textbf{Random forest-based PTB prediction model}. \textbf{(a)} Machine learning evaluations upon number of features (DAT). Random Forest classifier has the best BA (0.765 $\pm$ 0.071; Mean$\pm$SD) with the nine most important DAT. \textbf{(b)} Importance of DAT.}
+                \caption[Random forest-based PTB prediction model]{\textbf{Random forest-based PTB prediction model}. \\
+                    \textbf{(a)} Machine learning evaluations upon number of features (DAT). Random Forest classifier has the best BA (0.765$\pm$0.071; Mean$\pm$SD) with the nine most important DAT. \textbf{(b)} Importance of DAT.}
                 \label{fig:PTB-ML}
             \end{figure}
             \clearpage
@@ -286,7 +287,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/PTB/FigS1-Diversity.pdf}
-                \caption[Diversity indices]{\textbf{Diversity indices}. \textbf{(a)} Alpha diversity index (Faith PD). There is no statistically significant difference between the PTB and FTB group (MWU test $p=0.46$). \textbf{(b)} t-SNE plot with beta diversity index (Hamming distance). There is no statistically significant difference between the PTB and FTB group (PERMANOVA test $p=0.908$)}
+                \caption[Diversity indices]{\textbf{Diversity indices}. \\
+                    \textbf{(a)} Alpha diversity index (Faith PD). There is no statistically significant difference between the PTB and FTB group (MWU test $p=0.46$). \textbf{(b)} t-SNE plot with beta diversity index (Hamming distance). There is no statistically significant difference between the PTB and FTB group (PERMANOVA test $p=0.908$)}
                 \label{fig:PTB-diversity}
             \end{figure}
             \clearpage
@@ -294,7 +296,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/PTB/FigS2-PROM.pdf}
-                \caption[PROM-related DAT]{\textbf{PROM-related DAT}. Only seven of these 42 PROM-related DAT overlapped with PTB-related DAT (bold text). Blue dots represented PROM-underrepresented DAT, while red dots represented PROM-overrepresented DAT.}
+                \caption[PROM-related DAT]{\textbf{PROM-related DAT}. \\
+                    Only seven of these 42 PROM-related DAT overlapped with PTB-related DAT (bold text). Blue dots represented PROM-underrepresented DAT, while red dots represented PROM-overrepresented DAT.}
                 \label{fig:PTB-volcano}
             \end{figure}
             \clearpage
@@ -302,7 +305,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/PTB/FigS3-validation}
-                \caption[Validation of random forest-based PTB prediction model]{\textbf{Validation of random forest-based PTB prediction model}. Nine twin pregnancies (eight PTB subjects and a FTB subject) that were excluded in the initial study subjects were subjected to a validation procedure. The random forest-based PTB prediction model shows 87.5\% accuracy, comparable to the PTB classification evaluations on the singleton study subjects (0.714 $\pm$ 0.061. Mean$\pm$SD)}
+                \caption[Validation of random forest-based PTB prediction model]{\textbf{Validation of random forest-based PTB prediction model}. \\
+                    Nine twin pregnancies (eight PTB subjects and a FTB subject) that were excluded in the initial study subjects were subjected to a validation procedure. The random forest-based PTB prediction model shows 87.5\% accuracy, comparable to the PTB classification evaluations on the singleton study subjects (0.714$\pm$0.061. Mean$\pm$SD)}
                 \label{fig:PTB-validation}
             \end{figure}
             \clearpage
@@ -313,26 +317,36 @@
 
             One of the most common salivary taxa that has been examined is \textit{Fusobacterium nucleatum} \cite{Fusobacterium-1, Fusobacterium-2, Fusobacterium-3}, that is a Gram-negative, anaerobic, and filamentous bacteria. \textit{Fusobacterium nucleatum} can be separated from not only the salivary microbiome but also the vaginal microbiome \cite{PTB-mechanism-7, PTB-mechanism-8}. In both animal and human investigation, \textit{Fusobacterium nucleatum} infection has been linke to risk of PTB \cite{Fusobacterium-4}. According to recent researches, the placenta women who give birth prematurely may include additional salivary microbiome dysbiosis, such as \textit{Bergeyella} spp. and \textit{Porphyromonas gingivalis} \cite{Porphyromonas-1, Porphyromonas-2}. Although \textit{Bergeyella} spp. were one of the PROM-overrepresented DAT (Figure \ref{fig:PTB-volcano}), it was excluded in the final 25 PTB-related DAT. Furthermore,  \textit{Porpyhromonas gingivalis} and \textit{Campylobacter gracilis} were pathogens of periondontitis in subgingival microbiome \cite{PTB-mechanism-9}. \textit{Lactobacillus gasseri} was also one of the FTB-enriched DAT (Figure \ref{fig:PTB-DAT}), and it is well established that early PTB risk can be reduced by \textit{Lactobacillus gasseri} in the vaginal microbiome \cite{PTB-mechanism-10, PTB-mechanism-11}.
 
-            With DAT comprising 22 FTB-enriched DAT and three PTB-enriched DAT (Figure \ref{fig:PTB-DAT}), we discovered that the FTB study participants had the majority of the essential DAT that distinguished between the PTB and FTB groups. Thus, we hypothesize that the pathogenesis and pathophysiology of PTB may have been triggered by an absence of species with protective characteristics. The association between unfavorable pregnancy outcomes and a dysfunctional microbiome has been explained through two distinct processes. According to the first hypothesis, periodontal pathogens originating in the gingival bioflim might spread from the infected salivary microbiome over the placenta microbiome, invade the intra-amniotic fluid and fetal circulation, and then have a direct impact on the fetoplacental unit, leading to bacteremia \cite{Periodontitis-1}. Based on the second hypothesis, inflammatory mediators and endotoxins that generated by the subgingival inflammation and derived from dental plaque of periodontitis may spread throughout the body and reach the fetoplacental unit \cite{PTB-mechanism-12, PTB-mechanism-13}. Despite belonging to the same species, some subgroups of the salivary microbiome may influence pregancy outcomes in both favorable and adverse manners. Following this line of argumentation, the salivary microbiome composition or their dysbiosis are more significant than the existence of particular bacteria.
+            With DAT comprising 22 FTB-enriched DAT and three PTB-enriched DAT (Figure \ref{fig:PTB-DAT}), we discovered that the FTB study participants had the majority of the essential DAT that distinguished between the PTB and FTB groups. Thus, we hypothesize that the pathogenesis and pathophysiology of PTB may have been triggered by an absence of species with protective characteristics. The association between unfavorable pregnancy outcomes and a dysfunctional microbiome has been explained through two distinct processes. According to the first hypothesis, periodontal pathogens originating in the gingival biofilm might spread from the infected salivary microbiome over the placenta microbiome, invade the intra-amniotic fluid and fetal circulation, and then have a direct impact on the fetoplacental unit, leading to bacteremia \cite{Periodontitis-1}. Based on the second hypothesis, inflammatory mediators and endotoxins that generated by the sub-gingival inflammation and derived from dental plaque of periodontitis may spread throughout the body and reach the fetoplacental unit \cite{PTB-mechanism-12, PTB-mechanism-13}. Despite belonging to the same species, some subgroups of the salivary microbiome may influence pregnancy outcomes in both favorable and adverse manners. Following this line of argumentation, the salivary microbiome composition or their dysbiosis are more significant than the existence of particular bacteria.
 
-            Notably, microbial alteration that take place throughout pregnancy may be expected results of a healthy pregnancy. Those pregnancy-related vulnerabilities to dental problem like periodontitis can be explained by three factors. Because of hormone-driven gingival hyper-reactivity to the salivary microbiome in the oral biofilm including subgingival biofilm, these conditions are prevalent in pregnant women. For insight at the relationship between the salivary microbiome composition and PTB, further studies with pathway analysis are warranted.
+            Notably, microbial alteration that take place throughout pregnancy may be expected results of a healthy pregnancy. Those pregnancy-related vulnerabilities to dental problem like periodontitis can be explained by three factors. Because of hormone-driven gingival hyper-reactivity to the salivary microbiome in the oral biofilm including sub-gingival biofilm, these conditions are prevalent in pregnant women. For insight at the relationship between the salivary microbiome composition and PTB, further studies with pathway analysis are warranted.
 
             Our study confirmed that salivary microbiome composition could provide potential biomarkers for predicting pregnancy complications including PTB risks using random forest-based classification models, despite a limited number of study participants and a tiny validation sample size. Another limitation of our study was 16S rRNA sequencing. In other words, unlike the shotgun sequencing, 16S rRNA sequencing only focused on bacteria, not viruses nor fungi. We did not delve into other variables like nutrition status and socioeconomic statuses of study participants that might effect the salivary microbiome composition.
 
             Notwithstanding these limitations, this prospective examination showed the promise of the random forest-based PTB prediction models based on mouthwash-derived salivary microbiome composition. Before applying the methods developed in this study in a clinical context, more multi-center and extensive research is warranted to validate our findings.
         \newpage
 
-    \section{Prediction model for periodontitis severity based on the salivary microbiomes}
+    \section{Random forest prediction model for periodontitis statuses based on the salivary microbiomes}
         \label{section:Periodontitis}
 
         \textbf{This section includes the published contents:} \\
 
         \subsection{Introduction}
+            Saliva microbial dysbiosis brought on by the accumulation of plaque results in periodontitis, a chronic inflammatory disease of the tissue that surrounds the tooth \cite{Periodontitis-2}. Loss of periodontal attachment is a consequence of periodontitis, which may lead to irreversible bone loss and, eventually, permanent tooth loss if left untreated. A new classification criterion of periodontal diseases was created in 2018, about 20 years after the 1999 statements of the previous one. Even with this evolution, radio-graphic and clinical markers of periodontitis progression remain the primary methods for diagnosing periodontitis \cite{Periodontitis-4}. Such tools, nevertheless, frequently demonstrate the prior damage from periodontitis rather than its present condition. Certain individuals have a higher risk of periodontitis, a higher chance of developing severe generalized periodontitis, and a worse response to common salivary bacteria control techniques utilized to prevent and treat periodontitis. As a result, the 2017 framework for diagnosing periodontitis additionally allows for the potential development of biomarkers to enhance diagnosis and treatment of periodontitis \cite{Periodontitis-5}.
         \newpage
 
         \subsection{Materials and methods}
-            \subsubsection{Study subjects enrollment}
-                A total of 250 subjects who were enrolled in this study (100 healthy controls and 150 subjects with periodontitis) visited the Department of Periodontics at Pusan National University Dental Hospital between 2018-08 and 2019-03. The 150 patients with periodontitis were equally divided into three periodontitis stages: stages I, II, and III. The study protocol was approved by the Institutional Review Board of the Pusan National University Dental Hospital (PNUDH-2016-019). All participants received complete information regarding the objectives and procedures of this study and provided written informed consent. Excluded criteria are 1) those who received periodontal treatment (scaling and root planning) within the past six months; 2) those with systemic diseases, such as uncontrolled diabetes, that can affect the progression of periodontitis; 3) those who took antibiotics or anti-inflammatory drugs in the preceding three months; 4) women who were pregnant or breastfeeding; 5) those with acute infection (e.g., herpetic gingivostomatitis) or chronic mucous lesions (e.g., pemphigus or pemphigoid); and 6) those who refused to sign the informed consent form.
+            \subsubsection{Study participants enrollment}
+                Between 2018-08 and 2019-03, 250 study participants--100 healthy controls, 50 patients with stage I periodontitis, 50 patients with stage II periodontitis, and 50 patients with stage III periodontitis--visited visited the Department of Periodontics at Pusan National University Dental Hospital. The Institutional Review Board of the Pusan National University Dental Hospital accepted this study protocol and design (PNUDH-2016-019). Every study participants provided their written informed authorization after being fully informed about this study's objectives and methodologies. Exclusion criteria for the study participants are followings:
+                \begin{enumerate}
+                    \item People who, throughout the previous six months, underwent periodontal therapy, including root planing and scaling.
+                    \item People who struggle with systemic conditions that may affect periodontitis developments, such as diabetes.
+                    \item People who, throughout the previous three months, were prescribed anti-inflammatory medications or antibiotics.
+                    \item Women who were pregnant or breastfeeding.
+                    \item People who have persistent mucosal lesions, e.g. pemphigus or pemphigoid, or acute infection, e.g. herpertic gingivostomatitis.
+                \end{enumerate}
+
+                An skilled periodontist conducted each clinical procedure. Six sites per tooth were used to quantify gingival recession and probing depth: mesiobuccal, midbuccal, distobuccal, mesiolingual, midlingual, and distolingual \cite{Periodontitis-3}.
 
             \subsubsection{Periodontal clinical parameter diagnosis}
             \subsubsection{Saliva sampling and DNA extraction procedure}
@@ -344,19 +358,58 @@
             \subsubsection{Diversity indices reveal differences in diversity among the periodontal statuses}
             \subsubsection{Differentially abundant taxa among healthy and different periodontitis stages and their correlation}
             \subsubsection{Classification of periodontitis stages by random forest models}
-        \newpage
 
             \begin{table}[p]
                 \centering
-                \caption[Clinical characteristics of the study subjects]{\textbf{Clinical characteristics of the study subjects}. Significant differences were assessed using the Kruskal-Wallis test. NA: Not applicable.}
+                \caption[Clinical characteristics of the study subjects]{\textbf{Clinical characteristics of the study subjects}. \\
+                    Significant differences were assessed using the Kruskal-Wallis test. NA: Not applicable.}
                 \label{tab:Periodontitis-clinical}
+            \end{table}
+            \clearpage
+
+            \begin{table}[p]
+                \centering
+                \caption[Feature combinations and their evaluations]{\textbf{Feature combinations and their evaluations} \\
+                    Classification performance with the most important taxon, the two most important taxa, and taxa with the best-balanced accuracy. \textit{P.gingivalis} and \textit{Act.} are \textit{Porphyromonas gingivalis} and \textit{Actinomyces} spp., respectively.}
+                \label{tab:Periodontitis-ML}
+            \end{table}
+            \clearpage
+
+            \begin{table}[p]
+                \centering
+                \caption[Proportion of taxa according to periodontal statutes]{\textbf{Proportion of taxa according to periodontal statutes}}
+                \label{tab:Periodontitis-taxa}
+            \end{table}
+            \clearpage
+
+            \begin{table}[p]
+                \centering
+                \caption[List of DAT among the periodontally healthy and periodontitis stages]{\textbf{List of DAT among healthy status and periodontitis stages}}
+                \label{tab:Periodontitis-DAT}
+            \end{table}
+            \clearpage
+
+            \begin{table}[p]
+                \centering
+                \caption[Feature the importance of taxa in the classification of different periodontal statuses.]{\textbf{Feature the importance of taxa in the classification of different periodontal statuses} \\
+                    Taxa are ranked in descending order of importance; from most important to least important.}
+                \label{tab:Periodontitis-importance}
+            \end{table}
+            \clearpage
+
+            \begin{table}[p]
+                \centering
+                \caption[Beta-diversity pairwise comparisons on the periodontitis statuses]{\textbf{Beta-diversity pairwise comparisons on the periodontitis statuses} \\
+                    Statistically significant (p-value) was determined by the PERMANOVA test.}
+                \label{tab:Periodontitis-beta}
             \end{table}
             \clearpage
 
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_1.pdf}
-                \caption[Diversity indices]{\textbf{Diversity indices}. Comparisons of salivary microbiomes among healthy controls and patients with various periodontitis stages. Alpha-diversity indices \textbf{(a-e)} indicate that healthy controls have increased heterogeneity than periodontitis stages as measured by: \textbf{(a)} ace \textbf{(b)} chao1 \textbf{(c)} Fisher alpha \textbf{(d)} Margalef, and \textbf{(e)} observed ASVs. \textbf{(f)} The beta-diversity index (weighted UniFrac) was visualized using a tSNE-transformed plot. The confidence ellipses are shown to display the distribution of each periodontitis stage. The distance to each stage demonstrated that each periodontitis stage was distinguished from the other periodontitis stages: \textbf{(g)} distance to Healthy \textbf{(h)} distance to Stage I \textbf{(i)} distance to Stage II, and \textbf{(j)} distance to Stage III. Statistical significance determined by the Mann-Whitney U-test (MWU) test: $p \le 0.01$ (**) and $p \le 0.0001$ (****).}
+                \caption[Diversity indices]{\textbf{Diversity indices}. \\
+                    Alpha-diversity indices \textbf{(a-e)} indicate that healthy controls have increased heterogeneity than periodontitis stages as measured by: \textbf{(a)} ace \textbf{(b)} chao1 \textbf{(c)} Fisher alpha \textbf{(d)} Margalef, and \textbf{(e)} observed ASVs. \textbf{(f)} The beta-diversity index (weighted UniFrac) was visualized using a tSNE-transformed plot. The confidence ellipses are shown to display the distribution of each periodontitis stage. The distance to each stage demonstrated that each periodontitis stage was distinguished from the other periodontitis stages: \textbf{(g)} distance to Healthy \textbf{(h)} distance to Stage I \textbf{(i)} distance to Stage II, and \textbf{(j)} distance to Stage III. Statistical significance determined by the MWU test and the PERMANOVA test: $p \le 0.01$ (**) and $p \le 0.0001$ (****).}
                 \label{fig:Periodontitis-diveristy}
             \end{figure}
             \clearpage
@@ -364,7 +417,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_2.pdf}
-                \caption[Differentially abundant taxa]{\textbf{Differentially abundant taxa}. Differentially abundant taxa (DAT) that were identified by ANCOM. \textbf{(a)} Heatmap of clustered DAT with similar distribution among subjects. Group 1, Group 2, and Group 3 are marked in red, black, and green, respectively. \textbf{(b)} Box plots showing the proportions of DAT. Taxa were sorted by their importance according to ANCOM.}
+                \caption[Differentially abundant taxa (DAT)]{\textbf{Differentially abundant taxa (DAT)}. \\
+                    DAT that were identified by ANCOM. \textbf{(a)} Heatmap of clustered DAT with similar distribution among subjects. Group 1, Group 2, and Group 3 are marked in red, black, and green, respectively. \textbf{(b)} Box plots showing the proportions of DAT. Taxa were sorted by their importance according to ANCOM.}
                 \label{fig:Periodontitis-DAT}
             \end{figure}
             \clearpage
@@ -372,7 +426,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_3.pdf}
-                \caption[Correlation heatmap]{\textbf{Correlation heatmap}. Pearson's correlations between differentially abundant taxa in healthy status and periodontitis stages. Statistical significance was determined by strong correlation, i.e., $| \textrm{coefficient} | \ge 0.5$ (*).}
+                \caption[Correlation heatmap]{\textbf{Correlation heatmap}. \\
+                    Pearson's correlations between DAT in healthy status and periodontitis stages. Statistical significance was determined by strong correlation, i.e., $| \textrm{coefficient} | \ge 0.5$ (*).}
                 \label{fig:Periodontitis-correlation}
             \end{figure}
             \clearpage
@@ -380,7 +435,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_4.pdf}
-                \caption[Random forest classification metrics]{\textbf{Random forest classification metrics}. The classification metrics in the random forest classifications were as follows: accuracy (ACC), area-under-curve (AUC), balanced accuracy (BA), F1 score (F1), precision (PRE), sensitivity (SEN), and specificity (SPE). Every classification metric ranges from [0, 1], with higher values indicating better performance. \textbf{(a)} Classification performance for healthy vs. stage I vs. stage II vs. stage III. \textbf{(b)} Receiver-operating characteristics (ROC) curve for the highest BA of (a). \textbf{(c)} Classification performance for healthy vs. stage I. \textbf{(d)} ROC curve on the highest BA of (c). (\textbf{e)} Classification performance for healthy vs. stage I vs. stages II/III. \textbf{(f)} ROC curve for the highest BA of (e). \textbf{(g)} Classification performance for healthy vs. stages I/II/III. \textbf{(h)} ROC curve for the highest BA of (h).}
+                \caption[Random forest classification metrics]{\textbf{Random forest classification metrics}. \\
+                    The classification metrics in the random forest classifications were as follows: ACC, AUC, BA, F1, PRE, SEN, and SPE. \textbf{(a)} Classification performance for healthy vs. stage I vs. stage II vs. stage III. \textbf{(b)} ROC curve for the highest BA of (a). \textbf{(c)} Classification performance for healthy vs. stage I. \textbf{(d)} ROC curve on the highest BA of (c). (\textbf{e)} Classification performance for healthy vs. stage I vs. stages II/III. \textbf{(f)} ROC curve for the highest BA of (e). \textbf{(g)} Classification performance for healthy vs. stages I/II/III. \textbf{(h)} ROC curve for the highest BA of (h).}
                 \label{fig:Periodontitis-ML}
             \end{figure}
             \clearpage
@@ -388,7 +444,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_5.pdf}
-                \caption[Random forest classification metrics from external datasets]{\textbf{Random forest classification metrics from external datasets}. The classification metrics in the random forest classification included accuracy (ACC), balanced accuracy (BA), F1 score (F1), precision (PRE), sensitivity (SEN), and specificity (SPE). Every classification metric ranges from [0, 1], with higher values indicating better performance. (a) Classification performance for healthy vs. stage I vs. stage II vs. stage III. (b) Classification performance for healthy vs. stage I. (c) Classification performance for healthy vs. stage I vs. stages II/III. (d) Classification performance for healthy vs. stages I/II/III.}
+                \caption[Random forest classification metrics from external datasets]{\textbf{Random forest classification metrics from external datasets}. \\
+                    The classification metrics in the random forest classifications were as follows: ACC, AUC, BA, F1, PRE, SEN, and SPE. (a) Classification performance for healthy vs. stage I vs. stage II vs. stage III. (b) Classification performance for healthy vs. stage I. (c) Classification performance for healthy vs. stage I vs. stages II/III. (d) Classification performance for healthy vs. stages I/II/III.}
                 \label{fig:Periodontitis-validation}
             \end{figure}
             \clearpage
@@ -396,7 +453,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=0.75 \linewidth]{Figures/Periodontitis/Figure_S1.pdf}
-                \caption[Rarefaction curves for alpha diversity indices]{\textbf{Rarefaction curves for alpha diversity indices}. Rarefaction of \textbf{(a)} chao1 \textbf{(b)} margalef, and \textbf{(c)} observed ASVs were generated to measure species richness and determine the sampling depth of each sample.}
+                \caption[Rarefaction curves for alpha-diversity indices]{\textbf{Rarefaction curves for alpha-diversity indices}. \\
+                    Rarefaction of \textbf{(a)} chao1 \textbf{(b)} margalef, and \textbf{(c)} observed ASVs were generated to measure species richness and determine the sampling depth of each sample.}
                 \label{fig:Periodontitis-rarefaction}
             \end{figure}
             \clearpage
@@ -404,7 +462,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_S2.pdf}
-                \caption[Absolute abundance of salivary bacterial taxa in the different periodontal statuses at the species level]{\textbf{Absolute abundance of salivary bacterial taxa in the different periodontal statuses at the species level}. Stacked bar plot of the absolute abundance of bacterial species for all samples \textbf{(a)} and the mean absolute abundance of bacterial species in the healthy, stage I, stage II, and stage III groups \textbf{(b)}.}
+                \caption[Salivary microbiome compositions in the different periodontal statuses]{\textbf{Salivary microbiome compositions in the different periodontal statuses}. \\
+                    Stacked bar plot of the absolute abundance of bacterial species for all samples \textbf{(a)} and the mean absolute abundance of bacterial species in the healthy, stage I, stage II, and stage III groups \textbf{(b)}.}
                 \label{fig:Periodontitis-abundance}
             \end{figure}
             \clearpage
@@ -412,7 +471,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_S3.pdf}
-                \caption[Correlation plots for differentially abundant taxa]{\textbf{Correlation plots for differentially abundant taxa}. We selected the combinations of DAT with absolute Spearman correlation coefficients greater than 0.5. The color represents periodontal healthy periodontal statuses (green: healthy, cyan: stage I, yellow: stage II, and red: stage III).}
+                \caption[Correlation plots for differentially abundant taxa]{\textbf{Correlation plots for differentially abundant taxa}. \\
+                    We selected the combinations of DAT with absolute Spearman correlation coefficients greater than 0.5. The color represents periodontal healthy periodontal statuses (green: healthy, cyan: stage I, yellow: stage II, and red: stage III).}
                 \label{fig:Periodontitis-correlation2}
             \end{figure}
             \clearpage
@@ -420,7 +480,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_R02.pdf}
-                \caption[Clinical measurements by the periodontitis statuses]{\textbf{Clinical measurements by the periodontitis statuses}. Comparisons of clinical measurement among healthy controls and patients with various periodontitis stages. (a) Clinical attachment level (b) Probing depth. Statistical significance determined by the Mann-Whitney U-test: p ≤ 0.01 (**) and p ≤ 0.0001 (****).}
+                \caption[Clinical measurements by the periodontitis statuses]{\textbf{Clinical measurements by the periodontitis statuses}. \\
+                    Comparisons of clinical measurement among healthy controls and patients with various periodontitis stages. (a) Clinical attachment level (b) Probing depth. Statistical significance determined by the Mann-Whitney U-test: p ≤ 0.01 (**) and p ≤ 0.0001 (****).}
                 \label{fig:Periodontitis-clinical}
             \end{figure}
             \clearpage
@@ -428,7 +489,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_R03.pdf}
-                \caption[Number of read counts by the periodontitis statuses]{\textbf{Number of read counts by the periodontitis statuses}. Comparisons of the number of read counts among healthy controls and patients with various periodontitis stages. (a) Before quality check (b) After quality check. Statistical significance determined by the Mann-Whitney U-test: $p > 0.05$ (ns), $p \le 0.001$ (***), and $p \le 0.0001$ (****).}
+                \caption[Number of read counts by the periodontitis statuses]{\textbf{Number of read counts by the periodontitis statuses}. \\
+                    Comparisons of the number of read counts among healthy controls and patients with various periodontitis stages. (a) Before quality check (b) After quality check. Statistical significance determined by the Mann-Whitney U-test: $p > 0.05$ (ns), $p \le 0.001$ (***), and $p \le 0.0001$ (****).}
                 \label{fig:Periodontitis-QC}
             \end{figure}
             \clearpage
@@ -436,7 +498,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=0.9 \linewidth]{Figures/Periodontitis/Figure_R04.pdf}
-                \caption[Proportion of differentially abundant taxa]{\textbf{Proportion of differentially abundant taxa}. Proportions of differentially abundant taxa that were identified by ANCOM. (a) \textit{Actinomyces graevenitzii} (b) \textit{Actinomyces} spp. (c) \textit{Campylobacter showae} (d) \textit{Corynebacterium durum} (e) \textit{Filifactor alocis} (f) \textit{Fretibacterium} spp. (g) \textit{Lachnospiraceae [G-8] bacterium HMT 500} (h) \textit{Mycoplasma faucium} (i) \textit{Peptostreptococcaceae [XI][G-5] saphenum} (j) \textit{Peptostreptococcaceae [XI][G-6] nodatum} (k) \textit{Peptostreptococcaceae [XI][G-9] brachy} (l) \textit{Porphyromonas gingivalis} (m) \textit{Porphyromonas} sp. \textit{HMT 285} (n) \textit{Prevotella intermedia} (o) \textit{Prevotella} sp. \textit{HMT 304} (p) \textit{Prevotella} sp. \textit{HMT 526} (q) \textit{Tannerella forsythia} (r) \textit{Treponema putidum} (s) \textit{Treponema} sp. \textit{HMT 260} (t) \textit{Treponema} spp. Statistical significance determined by the Mann-Whitney U-test: $p > 0.05$ (ns), $p \le 0.05$ (*), $p \le 0.01$ (**), $p \le 0.001$ (***), and $p \le 0.0001$ (****).}
+                \caption[Proportion of DAT]{\textbf{Proportion of DAT}. \\
+                    (a) \textit{Actinomyces graevenitzii} (b) \textit{Actinomyces} spp. (c) \textit{Campylobacter showae} (d) \textit{Corynebacterium durum} (e) \textit{Filifactor alocis} (f) \textit{Fretibacterium} spp. (g) \textit{Lachnospiraceae [G-8] bacterium HMT 500} (h) \textit{Mycoplasma faucium} (i) \textit{Peptostreptococcaceae [XI][G-5] saphenum} (j) \textit{Peptostreptococcaceae [XI][G-6] nodatum} (k) \textit{Peptostreptococcaceae [XI][G-9] brachy} (l) \textit{Porphyromonas gingivalis} (m) \textit{Porphyromonas} sp. \textit{HMT 285} (n) \textit{Prevotella intermedia} (o) \textit{Prevotella} sp. \textit{HMT 304} (p) \textit{Prevotella} sp. \textit{HMT 526} (q) \textit{Tannerella forsythia} (r) \textit{Treponema putidum} (s) \textit{Treponema} sp. \textit{HMT 260} (t) \textit{Treponema} spp. Statistical significance determined by the MWU test: $p > 0.05$ (ns), $p \le 0.05$ (*), $p \le 0.01$ (**), $p \le 0.001$ (***), and $p \le 0.0001$ (****).}
                 \label{fig:Periodontitis-proportions}
             \end{figure}
             \clearpage
@@ -444,7 +507,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_R05.pdf}
-                \caption[Random forest classification metrics with the full microbiome compositions and ANCOM-selected DAT compositions]{\textbf{Random forest classification metrics with the full microbiome compositions and ANCOM-selected DAT compositions}. The classification metrics in the random forest classifications were as follows: accuracy (ACC), area-under-curve (AUC), balanced accuracy (BA), F1 score (F1), precision (PRE), sensitivity (SEN), and specificity (SPE). Every classification metric ranges from [0, 1], with higher values indicating better performance. (a) Classification performance for healthy vs. stage I vs. stage II vs. stage III. (b) Receiver-operating characteristics (ROC) curve for the highest BA of (a). (c) Classification performance for healthy vs. stage I. (d) ROC curve on the highest BA of (c). (e) Classification performance for healthy vs. stage I vs. stages II/III. (f) ROC curve for the highest BA of (e). (g) Classification performance for healthy vs. stages I/II/III. (h) ROC curve for the highest BA of (g). Statistical significance determined by the Mann-Whitney U-test test: p > 0.05 (ns), p ≤ 0.01 (**), and p ≤ 0.0001 (****).}
+                \caption[Random forest classification metrics with the full microbiome compositions and ANCOM-selected DAT compositions]{\textbf{Random forest classification metrics with the full microbiome compositions and ANCOM-selected DAT compositions}. \\
+                    The classification metrics in the random forest classifications were as follows: ACC, AUC, BA, F1, PRE, SEN, and SPE. (a) Classification performance for healthy vs. stage I vs. stage II vs. stage III. (b) ROC curve for the highest BA of (a). (c) Classification performance for healthy vs. stage I. (d) ROC curve on the highest BA of (c). (e) Classification performance for healthy vs. stage I vs. stages II/III. (f) ROC curve for the highest BA of (e). (g) Classification performance for healthy vs. stages I/II/III. (h) ROC curve for the highest BA of (g). Statistical significance determined by the MWU est test: $p > 0.05$ (ns), $p \le 0.01$ (**), and $p \le 0.0001$ (****).}
                 \label{fig:Periodontitis-full}
             \end{figure}
             \clearpage
@@ -452,7 +516,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_R06.pdf}
-                \caption[Alpha-diversity indices account for evenness]{\textbf{Alpha-diversity indices account for evenness}. Alpha-diversity indices (a-d) indicate that the heterogeneity between the periodontitis stages as measured by: (a) Berger-Parker d (b) Gini (c) Shannon (d) Simpson. Statistical significance determined by the Mann-Whitney U-test test: p ≤ 0.05 (*) and p ≤ 0.01 (**)}
+                \caption[Alpha-diversity indices account for evenness]{\textbf{Alpha-diversity indices account for evenness}. \\
+                    Alpha-diversity indices (a-d) indicate that the heterogeneity between the periodontitis stages as measured by: (a) Berger-Parker d (b) Gini (c) Shannon (d) Simpson. Statistical significance determined by the MWU test test: $p \le 0.05$ (*) and $p \le 0.01$ (**)}
                 \label{fig:Periodontitis-alpha}
             \end{figure}
             \clearpage
@@ -460,7 +525,8 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_R09.pdf}
-                \caption[Gradient Boosting classification metrics]{\textbf{Gradient Boosting classification metrics}. The classification metrics in the gradient boosting classifications were as follows: accuracy (ACC), area-under-curve (AUC), balanced accuracy (BA), F1 score (F1), precision (PRE), sensitivity (SEN), and specificity (SPE). Every classification metric ranges from [0, 1], with higher values indicating better performance. The feature counts mean that the classification model trained on the most important n features as the Supporting Table 2. (a) Comparison of Random forest (RF) and Gradient boosting (GB) for healthy vs. stage I vs. stage II vs. stage III. (b) Comparison of RF and GB for the highest BA of (a). (c) Classification performance for healthy vs. stage I. (d) Comparison of RF and GB for healthy vs. stage I vs. stages II/III. (f) Comparison of RF and GB for Healthy vs. Stage I vs. Stages II/III. (g) Classification performance for healthy vs. stages I/II/III. (h) Comparison of RF and GB for Healthy vs. Stages I/II/III.}
+                \caption[Gradient Boosting classification metrics]{\textbf{Gradient Boosting classification metrics}. \\
+                    The classification metrics in the random forest classifications were as follows: ACC, AUC, BA, F1, PRE, SEN, and SPE. The feature counts mean that the classification model trained on the most important $n$ features as the table \ref{tab:Periodontitis-DAT}. (a) Comparison of Random forest (RF) and Gradient boosting (GB) for healthy vs. stage I vs. stage II vs. stage III. (b) Comparison of RF and GB for the highest BA of (a). (c) Classification performance for healthy vs. stage I. (d) Comparison of RF and GB for healthy vs. stage I vs. stages II/III. (f) Comparison of RF and GB for Healthy vs. Stage I vs. Stages II/III. (g) Classification performance for healthy vs. stages I/II/III. (h) Comparison of RF and GB for Healthy vs. Stages I/II/III.}
                 \label{fig:Periodontitis-GB}
             \end{figure}
             \clearpage
