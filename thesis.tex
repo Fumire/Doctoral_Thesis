@@ -33,6 +33,7 @@
 \usepackage[notocbib]{apacite}
 \usepackage{kotex}
 \usepackage{microtype}
+\usepackage{rotating}
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
 
@@ -439,46 +440,63 @@
         \newpage
 
         \subsection{Results}
-            \subsubsection{Summary of sequencing data}
-                Among clinical information of the study participants, attachment level, probing depth, plaque index, and gingival index, were significantly increased with periodontitis severity (Kruskal-Wallis test $p < 0.001$), while sex were observed no significant difference (Table \ref{tab:PTB-clinical}). Additionally, 71461.00$\pm$11792.30 and 45909.78$\pm$11404.65 reads per sample were obtained before and after filtering low-quality reads and trimming extra-long tails, respectively (Figure \ref{fig:Periodontitis-QC}).
+            \subsubsection{Summary of  clinical information and sequencing data}
+                Among clinical information of the study participants, clinical attachment level, probing depth, plaque index, and gingival index, were significantly increased with periodontitis severity (Kruskal-Wallis test $p < 0.001$), while sex were observed no significant difference (Table \ref{tab:PTB-clinical}). Notably, clinical attachment level and probing depth have significant differences among the periodontitis severities (MWU test $p < 0.01$; Figure \ref{fig:Periodontitis-clinical}).
+
+                Additionally, 71461.00$\pm$11792.30 and 45909.78$\pm$11404.65 reads per sample were obtained before and after filtering low-quality reads and trimming extra-long tails, respectively (Figure \ref{fig:Periodontitis-QC}).
 
             \subsubsection{Diversity indices reveal differences among the periodontitis severities}
-                Rarefaction curves showed that the sequencing depth was sufficient (Figure \ref{fig:Periodontitis-rarefaction}). Alpha-diversity indices indicated significant differences between the healthy and the periodontitis stages (MWU $p \le 0.01$;Figure \ref{fig:Periodontitis-diversity}a-e); however, there were no significant differences between the periodontitis stages. This emphasizes how essential it is to classify the salivary microbiome compositions and distingush between the stages of periodontitis using machine learning approaches.
+                Rarefaction curves showed that the sequencing depth was sufficient (Figure \ref{fig:Periodontitis-rarefaction}). Alpha-diversity indices indicated significant differences between the healthy and the periodontitis stages (MWU test $p < 0.01$;Figure \ref{fig:Periodontitis-diversity}a-e); however, there were no significant differences between the periodontitis stages. This emphasizes how essential it is to classify the salivary microbiome compositions and distinguish between the stages of periodontitis using machine learning approaches.
 
-                The confidence ellipses of the tSNE-transformed beta-diversity index (Aitchison index) indicated distinct distributions among the periodontitis severities (PERMANOVA $p \le 0.01$; Figure \ref{fig:Periodontitis-diversity}f)
+                The confidence ellipses of the tSNE-transformed beta-diversity index (Aitchison index) indicated distinct distributions among the periodontitis severities (PERMANOVA $p \le 0.001$; Figure \ref{fig:Periodontitis-diversity}f). Aitchison index demonstrated significant differences every pairwise of the periodontitis severities (PERMANOVA test $p \le 0.001$; Table \ref{tab:Periodontitis-beta}). Significant differences in the distances between periodontitis severities further demonstrated the uniqueness of each severity of periodontitis (MWU test $p \le 0.05$; Figure \ref{fig:Periodontitis-diversity}g-j).
 
             \subsubsection{DAT among multiple periodontitis severities and their correlation}
+                Of the 425 total taxa that identified in the salivary microbiome composition (Figure \ref{fig:Periodontitis-abundance}), 20 DAT were identified (Table \ref{tab:Periodontitis-DAT}). Three separate subgroups were formed from the participants-level abundances of the DAT using a hierarchical clustering methodology (Figure \ref{fig:Periodontitis-DAT}a). Ten DAT that were significant enriched in stage II and stage III, but deficient in healthy formed Group 1. Furthermore, in comparison to the healthy, the seven DAT of Group 2 were significantly enriched in each of the stages of periodontitis. On the other hand, three DAT in Group 3 were deficient in stage II and stage III, but significantly enriched in healthy. The relative proportions of the DAT further supported these findings (Figure \ref{fig:Periodontitis-DAT}b), suggesting that the DAT is primarily linked to periodontitis rather than other salivary bacteria.
+
+                Correlation analysis from the DAT showed that DAT from Group 3 was negatively correlated with Group 1 and Group 2 (Figure \ref{fig:Periodontitis-correlation}), and strong correlations were observed the nine pairs of DAT (Figure \ref{fig:Periodontitis-correlation2}).
+
             \subsubsection{Classification of periodontitis severities by random forest models}
+                Based on the proportion of DAT, random forest classifier were trained to classify the periodontitis severities (Table \ref{tab:Periodontitis-importance}). First of all, we conducted multi-label classification for the multiple periodontitis severities, namely healthy, stage I, stage II, and stage III. In this setting, we classified multiple periodontitis severities with the highest BA of 0.779$\pm$0.029 (Table \ref{tab:Periodontitis-ML}). AUC ranged between 0.81 and 0.94 (Figure \ref{fig:Periodontitis-ML}b).
+
+                Second, since timely detection in dentistry is demanding \cite{Periodontitis-5}, we implemented a random forest classification for both healthy and stage I. Remarkably, the random forest classifier had the highest BA at 0.793$\pm$0.123 (Table \ref{tab:Periodontitis-ML}). In this setting, this model showed high AUC value for the classifying of stage I from healthy (AUC=0.85; Figure \ref{fig:Periodontitis-ML}d).
+
+                Third, based on the findings that the salivary microbiome composition in stage II is more comparable to those in stage III than to other severities (Figure \ref{fig:Periodontitis-diversity}f and Figure \ref{fig:Periodontitis-diversity}j), we combined stage II and stage III to perform a multi-label classification.
 
             \begin{table}[p]
                 \centering
                 \caption[Clinical characteristics of the study subjects]{\textbf{Clinical characteristics of the study subjects}. \\
                     Significant differences were assessed using the Kruskal-Wallis test. NA: Not applicable.}
+                \input{Tables/Periodontitis-clinical.tex}
                 \label{tab:Periodontitis-clinical}
             \end{table}
             \clearpage
 
-            \begin{table}[p]
+            \begin{sidewaystable}[p]
                 \centering
                 \caption[Feature combinations and their evaluations]{\textbf{Feature combinations and their evaluations} \\
                     Classification performance with the most important taxon, the two most important taxa, and taxa with the best-balanced accuracy. \textit{P.gingivalis} and \textit{Act.} are \textit{Porphyromonas gingivalis} and \textit{Actinomyces} spp., respectively.}
+                    \small\setlength{\tabcolsep}{1 pt}
+                    \input{Tables/Periodontitis-ML.tex}
                 \label{tab:Periodontitis-ML}
-            \end{table}
+            \end{sidewaystable}
             \clearpage
 
             \begin{table}[p]
                 \centering
                 \caption[List of DAT among the periodontally healthy and periodontitis stages]{\textbf{List of DAT among healthy status and periodontitis stages}}
                 \label{tab:Periodontitis-DAT}
+                \input{Tables/Periodontitis-DAT.tex}
             \end{table}
             \clearpage
 
-            \begin{table}[p]
+            \begin{sidewaystable}[p]
                 \centering
                 \caption[Feature the importance of taxa in the classification of different periodontal statuses.]{\textbf{Feature the importance of taxa in the classification of different periodontal statuses} \\
                     Taxa are ranked in descending order of importance; from most important to least important.}
                 \label{tab:Periodontitis-importance}
-            \end{table}
+                \tiny \setlength{\tabcolsep}{1 pt}
+                \input{Tables/Periodontitis-importance.tex}
+            \end{sidewaystable}
             \clearpage
 
             \begin{table}[p]
@@ -486,6 +504,7 @@
                 \caption[Beta-diversity pairwise comparisons on the periodontitis statuses]{\textbf{Beta-diversity pairwise comparisons on the periodontitis statuses} \\
                     Statistically significant (p-value) was determined by the PERMANOVA test.}
                 \label{tab:Periodontitis-beta}
+                \input{Tables/Periodontitis-beta.tex}
             \end{table}
             \clearpage
 
@@ -629,7 +648,7 @@
         \subsection{Results}
         \clearpage
 
-        \subsubsection{Discussion}
+        \subsection{Discussion}
         \clearpage
     \newpage
 
