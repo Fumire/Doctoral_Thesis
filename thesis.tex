@@ -33,6 +33,7 @@
 \usepackage[notocbib]{apacite}
 \usepackage{kotex}
 \usepackage{microtype}
+\usepackage{multirow}
 \usepackage{rotating}
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
@@ -188,9 +189,47 @@
     \section{Introduction}
         The microbiome refers to the complex community of microorganisms, including bacteria, viruses, fungi, and other microbes, that inhabit various environment within living organisms \cite{microbiome-1, microbiome-3}. In humans, the microbiome plays a crucial role in maintaining health \cite{microbiome-2}, influencing processes such as digestion \cite{microbiome-digestion-1}, immune response \cite{microbiome-immune-1, microbiome-immune-2, microbiome-immune-3}, and even mental health \cite{microbiome-mental-1, microbiome-mental-2, microbiome-mental-3}. These microbial communities are not static nor constant, but rather dynamic ecosystem that interacts with their host and respond to environmental changes. Recent studies have revealed that imbalances in the microbiome, known as dysbiosis, can contribute to a wide range of diseases, including obesity \cite{microbiome-obesity-1, microbiome-obesity-2, microbiome-obesity-3}, diabetes \cite{microbiome-diabetes-1, microbiome-diabetes-2, microbiome-diabetes-3}, infections \cite{microbiome-infection-1, microbiome-infection-2}, inflammatory conditions \cite{microbiome-inflammation-1, microbiome-inflammation-2, microbiome-inflammation-3}, and cancers \cite{microbiome-cancer-1, microbiome-cancer-2, microbiome-cancer-3, microbiome-cancer-4}. Thus, understanding the composition of the human microbiomes is essential for developing new therapeutic approaches that target these microbial populations to promote health and prevent diseases.
 
-        (Diversity indices)
+        Diversity indices are essential techniques for evaluating the complexity and variety of microbial communities,in ecological and microbiological research \cite{Diversity-1, Diversity-2}. Alpha-diversity index attributes to the heterogeneity within a specific community, obtaining the number of different taxa and the distribution of taxa among the individuals, i.e., richness and evenness. On the other hand, beta-diversity index measures the variations in microbiome compositions between the individuals, highlighting differences among the microbiome compositions of the study participants. Altogether, by providing a thorough understanding of microbiome compositions, diversity indices, e.g. alpha-diversity and beta-diversity, allow us to investigate factors that affecting community variability and structure.
 
-        (Classification evaluation)
+        Classification is one of the supervised machine learning techniques used to categorized data into predefined classes based on features within the data. In other words, the method learns the relationship between input features and their corresponding output classes through the process of training a classification model using labeled data. Classification models are essential for advising choices in a wide range of applications, including medical diagnostics. Thus, researchers could uncover sophisticated connections in input features and corresponding classes and produce reliable prediction by utilizing machine learning classification.
+
+        Random forest classification is one of the ensemble machine learning methods that constructs several decision trees during training and aggregates their results to provide classification predictions \cite{RF-1}. A portion of the features and classes--known as bootstrapping \cite{RF-2, RF-3, RF-4} and feature bagging \cite{RF-5, RF-6, RF-7}--are utilized to construct each tree in the forest. The majority vote from each tree determines the final classification, which lowers the possibility of overfitting in comparison to a single decision tree. Furthermore, random forest classifier offers several advantages, including its robustness to outliers and its ability to calculate the feature importance.
+
+        Evaluating the performance of a machine learning classification model is essential to ensure its reliability and effectiveness in real-world solutions and applications. A confusion matrix is a tabular representation of predictions of classification, showing the counts of true positives, true negatives, false positives, and false negatives (Table \ref{tab:confusion}). From this matrix, evaluations can be derived: accuracy (ACC; Equation \ref{eq:ACC}), balanced accuracy (BA; Equation \ref{eq:BA}), F1 score (F1; Equation \ref{eq:F1}), sensitivity (SEN; Equation \ref{eq:SEN}), specificity (SPE; Equation \ref{eq:SPE}), and precision (PRE; Equation \ref{eq:PRE}). These metrics are in $[0, 1]$ range and high metrics are good metrics. The confusion matrix also helps in identifying specific types of errors, such as a tendency to produce false positive or false negatives, offering valuable insights for improving the classification model. By combining the confusion matrix with other evaluation metrics, researchers can comprehensively assess the classification metrics and refine it for real-world solutions and applications.
+
+        \begin{table}[p]
+            \centering
+            \caption{Confusion matrix}
+            \label{tab:confusion}
+            \input{Tables/confusion.tex}
+        \end{table}
+        \clearpage
+
+        \begin{equation}
+            \textrm{ACC} = \frac{\textrm{TP} + \textrm{TN}}{\textrm{TP} + \textrm{FN} + \textrm{FP} + \textrm{TN}}
+            \label{eq:ACC}
+        \end{equation}
+        \begin{equation}
+            \textrm{BA} = \frac{1}{2} \times (\frac{\textrm{TP}}{\textrm{TP} + \textrm{FN}} + \frac{\textrm{TN}}{\textrm{TN} + \textrm{FP}})
+            \label{eq:BA}
+        \end{equation}
+        \begin{equation}
+            \textrm{F1} = \frac{2 \times \textrm{TP}}{2 \times \textrm{TP} + \textrm{FP} + \textrm{FN}}
+            \label{eq:F1}
+        \end{equation}
+        \begin{equation}
+            \textrm{SEN} = \frac{\textrm{TP}}{\textrm{TP} + \textrm{FP}}
+            \label{eq:SEN}
+        \end{equation}
+        \begin{equation}
+            \textrm{SPE} = \frac{\textrm{TN}}{\textrm{TN} + \textrm{FN}}
+            \label{eq:SPE}
+        \end{equation}
+        \begin{equation}
+            \textrm{PRE} = \frac{\textrm{TP}}{\textrm{TP} + \textrm{FP}}
+            \label{eq:PRE}
+        \end{equation}
+        \clearpage
     \newpage
 
     \section{Predicting preterm birth using random forest classifier in salivary microbiome}
