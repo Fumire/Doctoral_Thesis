@@ -37,6 +37,7 @@
 \usepackage{rotating}
 \usepackage{xurl}
 \usepackage{lineno}
+\usepackage{enumitem}
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
 
@@ -492,8 +493,8 @@
                 NexteraXT Indexed Primer was applied to amplification 10 $\mu$L of the purified initial PCR products for the final library creation. The second PCR used the same conditions as the first PCR conditions but with 10 cycles. 16S rRNA gene sequencing was performed via 2$\times$300 bp paired-end sequencing at Macrogen Inc. (Macrogen, Seoul, Korea) using Illumina MiSeq platform (Illumina, San Diego, CA, USA).
 
             \subsubsection{Bioinformatics analysis}
-                We computed alpha-diversity and beta-diversity indices to quantify the divergence of phylogenetic information. Following alpha-diversity indices were calculated using the scikit-bio Python package (version 0.5.5) \cite{scikit-bio-1}, and these alpha-diversity indices were compared using the MWU test.:
-                \begin{itemize}
+                We computed alpha-diversity and beta-diversity indices to quantify the divergence of phylogenetic information. Following alpha-diversity indices were calculated using the scikit-bio Python package (version 0.5.5) \cite{scikit-bio-1}, and these alpha-diversity indices were compared using the MWU test:
+                \begin{itemize}[noitemsep,nolistsep]
                     \item Abundance-based Coverage Estimator (ACE) \cite{ACE-1}
                     \item Chao1 \cite{chao1-1}
                     \item Fisher \cite{fisher-1}
@@ -532,7 +533,7 @@
                 Of the 425 total taxa that identified in the salivary microbiome composition (Figure \ref{fig:Periodontitis-abundance}), 20 DAT were identified (Table \ref{tab:Periodontitis-DAT}). Three separate subgroups were formed from the participants-level abundances of the DAT using a hierarchical clustering methodology (Figure \ref{fig:Periodontitis-DAT}a):
                 \begin{itemize}
                     \item Group 1
-                    \begin{enumerate}
+                    \begin{enumerate}[noitemsep,nolistsep]
                         \item \textit{Treponema} spp.
                         \item \textit{Prevotella} sp. \textit{HMT 304}
                         \item \textit{Prevotella} sp. \textit{HMT 526}
@@ -546,7 +547,7 @@
                     \end{enumerate}
 
                     \item Group 2
-                    \begin{enumerate}
+                    \begin{enumerate}[noitemsep,nolistsep]
                         \item \textit{Porphyromonas gingivalis}
                         \item \textit{Campylobacter showae}
                         \item \textit{Filifactor alocis}
@@ -557,7 +558,7 @@
                     \end{enumerate}
 
                     \item Group 3
-                    \begin{enumerate}
+                    \begin{enumerate}[noitemsep,nolistsep]
                         \item \textit{Actinomyces} spp.
                         \item \textit{Corynebacterium durum}
                         \item \textit{Actinomyces graevenitzii}
@@ -764,13 +765,41 @@
             In our correlation analysis (Figure \ref{fig:Periodontitis-correlation}), we have discovered strongly negative correlations ($\textrm{coefficient} \le -0.5$) between DAT of Group 3 and these of Group 1 and Group 2; we have also identified nine DAT pairs with strong correlations ($\textrm{coefficient} \le -0.5 \vee \textrm{coefficient} \ge 0.5$) (Figure \ref{fig:Periodontitis-correlation2}). Interestingly, there were strongly negative correlations ($\textrm{coefficient} \le -0.5$) between Group 2 DAT and \textit{Actinomyces} spp., taxa which belong to Group 3: \textit{Filifactor alocis} (Figure \ref{fig:Periodontitis-correlation2}a), \textit{Porphyromonas gingivalis} (Figure \ref{fig:Periodontitis-correlation2}b), and \textit{Treponema putidum} (Figure \ref{fig:Periodontitis-correlation2}c). Taken together that pathogens, including \textit{Filifactor alocis} \cite{Periodontitis-31, Periodontitis-32}, \textit{Porphyromonas gingivalis} \cite{Periodontitis-22}, and \textit{Treponema putidum} \cite{Periodontitis-25}, become dominant taxa in patients with stage III periodontitis. On the other hand, commensal salivary bacteria, such as \textit{Actinomyces} spp., gradually declined. Additionally, several DAT from Group 1 and Group 2 exhibited strong positive correlations ($\textrm{coefficient} \ge 0.5$) (Figure \ref{fig:Periodontitis-correlation2}d-i). It has been established that all of these DAT from Group 1 and Group 2 are periodontal pathogens: \textit{Filifactor alocis} \cite{Periodontitis-31, Periodontitis-32}, \textit{Fretibacterium} spp. \cite{Periodontitis-33}, \textit{Lachnospiraceae[G-8] bacterium HMT 500} \cite{Periodontitis-8}, \textit{Peptostreptococcaceae[XI][G-6] nodatum} \cite{Periodontitis-8, Periodontitis-34}, \textit{Peptostreptococcaceae[XI][G-9] brachy} \cite{Periodontitis-8}, and Treponema putidum \cite{Periodontitis-25}. Thus, these fundamental roles of identified periodontal pathogens in the pathophysiology and progression of periodontitis are further supported by these strong positive correlations ($\textrm{coefficient} \ge 0.5$), suggesting that advanced periodontitis, \textit{i.e.}, stage III, might arise from the additional DAT from Group 1 and Group 2.
 
             Moreover, to predict peridontitis statuses from salivary microbiome composition, we have constructed machine-learning classification models based on random forest for four classification settings:
-            \begin{enumerate}
+            \begin{enumerate}[noitemsep,nolistsep]
                 \item healthy vs. stage I vs. stage II vs. stage III
                 \item healthy vs. stage I
                 \item healthy vs. stage I vs. stages II/III
                 \item healthy vs. stages I/II/III
             \end{enumerate}
-            \textit{Porphyromonas gingivalis} and \textit{Actinomyces} spp. were the two most important taxa (feature) in all classification settings.
+            \textit{Porphyromonas gingivalis} and \textit{Actinomyces} spp. were the two most important taxa (feature) in all classification settings. This finding aligns with a recent study that identifies \textit{Actinomyces} spp. as the most prevalent bacteria in both the healthy gingivitis controls, while \textit{Porphyromonas gingivalis} is recognized as the most predominant taxon within the periodontitis subjects, based on analyses of subgingival plaque samples \cite{Periodontitis-11}. We have previously developed machine learning models for the classification of periodontitis, with the objective of predicting the severities of chronic periodontitis by analyzing the copy numbers of nine known salivary bacteria species. We classified healthy controls and patients with periodontitis utilizing bacterial combinations in conjunction with a random forest model \cite{Periodontitis-diagnosis-8}:
+            \begin{itemize}[noitemsep,nolistsep]
+                \item AUC: 94\%
+                \item BA: 84\%
+                \item SEN: 95\%
+                \item SPE: 72\%
+            \end{itemize}
+
+            Another study established a machine-learning model for the classification of periodontitis, employing 266 species derived from the buccal microbiome \cite{Periodontitis-35}:
+            \begin{itemize}[noitemsep,nolistsep]
+                \item AUC: 92\%
+                \item BA: 84\%
+                \item SEN: 94\%
+                \item SPE: 74\%
+            \end{itemize}
+
+            By separating patients with periodontitis from healthy controls using only four DAT, \textit{e.g.} \textit{Actinomyces graevenitzii}, \textit{Actinomyces} spp., \textit{Corynebacterium durum}, and \textit{Porphyromonas gingivalis}, our machine learning model performed better than previously published models (Figure \ref{fig:Periodontitis-ML}, Table \ref{tab:Periodontitis-ML}, and Table \ref{tab:Periodontitis-importance}):
+            \begin{itemize}[noitemsep,nolistsep]
+                \item AUC: 95.3\%$\pm$4.9\%
+                \item BA: 88.5\%$\pm$6.6\%
+                \item SEN: 86.4\%$\pm$15.7\%
+                \item SPE: 90.5\%$\pm$7.0\%
+            \end{itemize}
+
+            This result showed that by detecting Group 3 bacteria that were substantially abundant in health controls than patients with periodontitis, our study increased BA by at least 5\% and SPE by at least 17\%.
+
+            Furthermore, we have validated our machine-learning prediction model using openly accessible 16S gene rRNA sequencing data from Portuguese \cite{Periodontitis-10} and Spanish participants \cite{Periodontitis-Portuguese-1} in order to ensure the consistency of our random forest classification model (Figure \ref{fig:Periodontitis-validation}). Our classification models employed in this study were primarily developed and assessed on Korean study participants, which may limit their generalizability to other ethnic groups with different salivary microbiome compositions \cite{Periodontitis-ethnic-1, Periodontitis-ethnic-2}. Therefore, the evaluations of this periodontitis classification models can be affected by ethnic-specific variances and differences, highlighting the necessity for additional validation and adjustment across a spectrum of ethnic backgrounds.
+
+            Regarding the clinical characteristics and potential confounders influencing the analysis of salivary microbiome compositions connected with periodontitis severity, this study had a number of limitations that were pointed out. We did not offer clinical information, such as the percentage of teeth, the percentage of bleeding on probing, nor dental furcation involvement, even though we did gather information on attachment level, probing depth, plaque index, and gingival index; this might have it challenging to present thorough and in-depth data about periodontal health. Moreover, the broad age range may make it tougher to evaluate the relationship between age and periodontitis statuses, providing the necessity for future studies to consider into account more comprehensive clinical characteristics associated with periodontitis. Additionally, potential confounders--\textit{e.g.} body mass index and e-cigarette use--which might have affected dental health and salivary microbiome composition were disregarding consideration in addition to smoking status and systemic diseases. Thus, future research incorporating these components would offer a more thorough knowledge of how lifestyle factors interact and affect the salivary microbiome composition and periodontal health. Throughout, resolving these limitations will advance our understanding in pathogenesis and development of periodontitis, offering significant novel insights on the causal connection between systemic diseases and the salivary microbiome compositions.
         \newpage
 
     \section{Colon microbiome}
