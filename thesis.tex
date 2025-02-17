@@ -302,7 +302,7 @@
                 The taxa for predicting PTB using salivary microbiome data were determined using a random forest classifier \cite{RF-1}. Through stratified $k$-fold cross-validation ($k=5$) that preserves the existence rate of PTB and FTB participants, consistency and trustworthy classification were ensured \cite{Kfold-1}.
 
             \subsubsection{Data and code availability}
-                All sequences from the 59 study participants have been added to the Sequence Read Archives (project ID PRJNA985119): \url{https://dataview.ncbi.nlm.nih.gov/object/PRJNA985119}. Docker image that employed throughout this study is available in the DockerHub: \url{https://hub.docker.com/r/fumire/helixco_premature}. Every code used in this study can be found on GitHub: \url{https://github.com/CompbioLabUnist/Helixco_Premature}.
+                All sequences from the 59 study participants have been published to the Sequence Read Archives (project ID \texttt{PRJNA985119}): \url{https://dataview.ncbi.nlm.nih.gov/object/PRJNA985119}. Docker image that employed throughout this study is available in the DockerHub: \url{https://hub.docker.com/r/fumire/helixco_premature}. Every code used in this study can be found on GitHub: \url{https://github.com/CompbioLabUnist/Helixco_Premature}.
         \newpage
 
         \subsection{Results}
@@ -519,7 +519,7 @@
                 We investigated external datasets from Spanish individuals \cite{Periodontitis-10} and Portuguese individuals \cite{Periodontitis-Portuguese-1} to confirm that our random forest classification was consistent. To ascertain repeatability and dependability, the external datasets were processed using the same pipeline and parameters as those used for our study participants.
 
             \subsubsection{Data and code availability}
-                All sequences from the 250 study participants have been added to the Sequence Read Archives (project ID PRJNA976179): \url{https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA976179}. Docker image that employed throughout this study is available in the DockerHub: \url{https://hub.docker.com/repository/docker/fumire/periodontitis_16s}. Every code used in this study can be found on GitHub: \url{https://github.com/CompbioLabUnist/Periodontitis_16S}.
+                All sequences from the 250 study participants have been published to the Sequence Read Archives (project ID \texttt{PRJNA976179}): \url{https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA976179}. Docker image that employed throughout this study is available in the DockerHub: \url{https://hub.docker.com/repository/docker/fumire/periodontitis_16s}. Every code used in this study can be found on GitHub: \url{https://github.com/CompbioLabUnist/Periodontitis_16S}.
         \newpage
 
         \subsection{Results}
@@ -567,7 +567,7 @@
                     \end{enumerate}
                 \end{itemize}
 
-                Ten DAT that were significant enriched in stage II and stage III, but deficient in healthy formed Group 1. Furthermore, in comparison to the healthy, the seven DAT of Group 2 were significantly enriched in each of the stages of periodontitis. On the other hand, three DAT in Group 3 were deficient in stage II and stage III, but significantly enriched in healthy. The relative proportions of the DAT further supported these findings (Figure \ref{fig:Periodontitis-DAT}b), suggesting that the DAT is primarily linked to periodontitis rather than other salivary bacteria.
+                Ten DAT that were significant enriched in stage II and stage III, but deficient in healthy formed Group 1 (Figure \ref{fig:Periodontitis-DAT}). Furthermore, in comparison to the healthy, the seven DAT of Group 2 were significantly enriched in each of the stages of periodontitis. On the other hand, three DAT in Group 3 were deficient in stage II and stage III, but significantly enriched in healthy. The relative proportions of the DAT further supported these findings (Figure \ref{fig:Periodontitis-DAT}b), suggesting that the DAT is primarily linked to periodontitis rather than other salivary bacteria.
 
                 Correlation analysis from the DAT showed that DAT from Group 3 was negatively correlated with Group 1 and Group 2 (Figure \ref{fig:Periodontitis-correlation}), and strong correlations were observed the nine pairs of DAT (Figure \ref{fig:Periodontitis-correlation2}).
 
@@ -819,14 +819,23 @@
 
             Recent studies have highlighted the crucial role of the gut microbiome in tumorigenesis and progression of CRC \cite{gut-CRC-1, gut-CRC-2}, with dysbiosis emerging as a potential risk factor. Dysbiosis in gut microbiome compositions can promote tumorigenesis of many cancers, including CRC, through several signaling cascades, including inflammation, mutagenesis, and altered metabolism in host. Certain bacteria species, such as \textit{Fusobacterium} genus \cite{Fusobacterium-5, Fusobacterium-6, Fusobacterium-7}, \textit{Bacteroides} genus \cite{Bacteroides-1, Bacteroides-2}, and \textit{Escherichia coli} \cite{Escherichia-1, Escherichia-2}, have been associated with development and progression of CRC by producing pro-inflammatory signals, generating toxins including mutagens, and disrupting the intestinal barriers including mucous surface. In contrast, beneficial bacteria, such as \textit{Lactobacillus} genus \cite{Lactobacillus-1, Lactobacillus-2} and \textit{Bifidobacterium} genus \cite{Bifidobacterium-1, Bifidobacterium-2}, are regarded to apply protective roles by maintaining homeostasis of gut microbiome compositions and regulating immune responses including inflammation.
 
-            (Novelty)
+            Furthermore, identifying metagenome biomarkers in Korean CRC patients is essential, as the gut microbiome compositions significantly vary by ethnicity due to genetic, dietary, and environmental factor. Previous investigations have shown that gut microbiome compositions, in terms of microbial diversity, dominant taxa, and functional microbial pathways differ across populations, influencing disease susceptibility and cancer progression. Additionally, ethnicity-specific microbiome composition signatures may affect the reliability of previously established biomarkers derived from predominantly Western CRC cohorts, necessitating population-specific investigations. By identifying metagenomic biomarkers tailored to Korean CRC patients, we can improve early detection rate of early-stage CRC, develop more accurate risk of CRC, and explore microbiome-targeted therapies that consider host-microbiome interactions within the Korean population.
+
+            Accordingly, this study aims to identify microbiome-based biomarkers specific to CRC within the Korean population, addressing the critical demand for ethnicity-specific microbiome research. By leveraging metagenomic sequencing and advanced computational biology analysis, this study seeks to uncover novel microbial signatures associated with Korean CRC patients. As part of the larger "Multi-genomic analysis for biomarker development in colon cancer" (NTIS No. \texttt{1711055951}) project, this study investigates microbial signatures within next-generation sequencing data to enhance precision medicine approaches for CRC and to develop robust microbiome-based biomarkers for early detection, prognosis, and therapeutic stratification, complementing genomic and epigenomic markers. Hence, this research represents a crucial step toward personalized cancer diagnostic and therapeutic strategies tailored to the Korean population.
         \clearpage
 
         \subsection{Materials and methods}
             \subsubsection{Study participants enrollment}
+                To achieve metagenomic observations of CRC, a total of 211 Korean CRC patients were enrolled (Table \ref{tab:CRC-clinical}). The tissue samples were collected from both the tumor site and its corresponding adjacent normal site to enable comparative metagenomic analyses. Tumor tissue samples were obtained from confirmed CRC lesions, ensuring adequate representation of CRC-associated microbial alterations. Adjacent normal tissues were collected from non-cancerous regions away from the tumor margin to serve as a control for baseline molecular and microbial composition.
+
             \subsubsection{DNA extraction procedure}
+                Tissue samples were immediately processed under sterile conditions to prevent contamination and preserved in -80 \textcelsius storage for downstream DNA extraction and whole-genome sequencing. Furthermore, produced sequencing data were provided by the multi-genomic analysis for biomarker development in colon cancer project (NTIS No. \texttt{1711055951}) in mapped BAM format, aligned to the hg38 human reference genome. The preprocessing pipeline utilized by the main project included high-throughput whole-genome sequencing using standardized alignment algorithm, BWA. In addition to the mapped human sequences, our whole-genome sequencing data retained unmapped sequences, which contain potential microbial reads that were not aligned to the human reference genome.
+
             \subsubsection{Bioinformatics analysis}
+                To identify microbial signatures associated with CRC, we employed PathSeq, a computational pipeline designed for metagenomic analysis of high-throughput sequencing data including the whole-genome sequences. After processing these sequencing data through the PathSeq pipeline, a comprehensive bioinformatics analyses were conducted to characterize microbial signatures associated with CRC. Prevalent taxa identification was performed by determining microbial taxa present in the majority of the study participants, filtering out low-abundance and rare taxa to ensure robust downstream analyses. To assess microbial community structure, diversity indices were calculated, including alpha-diversity to evaluate single-sample diversity and beta-diversity to compare microbial composition between the tumor tissues and their corresponding adjacent normal tissues. Differentially abundant taxa (DAT) were identified using statistical method, (DESeq2, ANCOM), adjusting for sequencing depth and potential confounders to highlight taxa significantly associated with CRC. To explore functional implications, microbial pathway prediction was performed using (PICRUSt3, HUMAnN3), linking microbial composition to metabolic and functional pathways relevant to carcinogenesis and progression of CRC. This multi-layered bioinformatics approach enabled a comprehensive investigation of gut microbiome alteration in CRC, facilitating the identification of potential microbial biomarkers for diagnosis and prognosis of CRC.
+
             \subsubsection{Data and code availability}
+                All sequences from the 211 study participants have been published to the Korea Bioinformation Center (data ID \texttt{KGD10008857}): \url{https://kbds.re.kr/KGD10008857}.
         \clearpage
 
         \subsection{Results}
@@ -838,7 +847,7 @@
 
             \begin{table}[p]
                 \caption{Clinical characteristics of the study participants}
-                \label{tab:colon-clinical}
+                \label{tab:CRC-clinical}
             \end{table}
             \clearpage
         \clearpage
