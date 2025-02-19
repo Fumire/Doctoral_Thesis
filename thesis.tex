@@ -830,12 +830,12 @@
                 Tissue samples were immediately processed under sterile conditions to prevent contamination and preserved in low temperature ($-$80 \textcelsius) storage for downstream DNA extraction and whole-genome sequencing. Furthermore, produced sequencing data were provided by the "Multi-genomic analysis for biomarker development in colon cancer" project (NTIS No. \texttt{1711055951}) in mapped BAM format, aligned to the hg38 human reference genome. The preprocessing pipeline utilized by the main project included high-throughput whole-genome sequencing using standardized alignment algorithm, BWA \cite{BWA-1}. In addition to the mapped human sequences, our whole-genome sequencing data retained unmapped sequences, which contain potential microbial reads that were not aligned to the human reference genome.
 
             \subsubsection{Bioinformatics analysis}
-                To identify microbial signatures associated with CRC, we employed PathSeq \cite{PathSeq-1, PathSeq-2}, a computational pipeline designed for metagenomic analysis of high-throughput sequencing data including the whole-genome sequences. After processing these sequencing data through the PathSeq pipeline, a comprehensive bioinformatics analyses were conducted to characterize microbial signatures associated with CRC.
+                To identify microbial signatures associated with CRC, we employed PathSeq (version 4.1.8.1) \cite{PathSeq-1, PathSeq-2}, a computational pipeline designed for metagenomic analysis of high-throughput sequencing data including the whole-genome sequences. After processing these sequencing data through the PathSeq pipeline, a comprehensive bioinformatics analyses were conducted to characterize microbial signatures associated with CRC.
 
                 Prevalent taxa identification was performed by determining microbial taxa present in the majority of the study participants, filtering out low-abundance and rare taxa to ensure robust downstream analyses.
 
                 To assess microbial community structure, diversity indices were calculated, including alpha-diversity to evaluate single-sample diversity and beta-diversity to compare microbial composition between the tumor tissues and their corresponding adjacent normal tissues. Following alpha-diversity indices were calculated using the scikit-bio Python package (version 0.6.3) \cite{scikit-bio-1}, and these alpha-diversity indices were compared using the MWU test:
-                \begin{itemize}[noitemsep, nolistsep]
+                \begin{enumerate}[noitemsep, nolistsep]
                     \item Berger-Parker $d$ \cite{Berger-1}
                     \item Chao1 \cite{chao1-1}
                     \item Dominance
@@ -848,7 +848,17 @@
                     \item Simpson $d$
                     \item Singles
                     \item Strong \cite{strong-1}
-                \end{itemize}
+                \end{enumerate}
+
+                Furthermore, these beta-diversity indices were measured and compared using the PERMANOVA test \cite{PERMANOVA-1, PERMANOVA-2}. To demonstrate multi-dimensional data from the beta-diversity indices, we utilized the t-SNE algorithm \cite{tSNE-1}.
+                \begin{enumerate}[noitemsep, nolistsep]
+                    \item Bray-Curtis \cite{BrayCurtis-1}
+                    \item Canberra
+                    \item Cosine \cite{Cosine-1}
+                    \item Hamming \cite{Hamming-1}
+                    \item Jaccard \cite{Jaccard-1}
+                    \item Sokal-Sneath \cite{Sokal-1}
+                \end{enumerate}
 
                 Differentially abundant taxa (DAT) were identified using statistical method, (DESeq2 \cite{DESeq2-1}, ANCOM \cite{ANCOM-1}), adjusting for sequencing depth and potential confounders to highlight taxa significantly associated with CRC. To explore functional implications, microbial pathway prediction was performed using (PICRUSt3, HUMAnN3), linking microbial composition to metabolic and functional pathways relevant to carcinogenesis and progression of CRC. This multi-layered bioinformatics approach enabled a comprehensive investigation of gut microbiome alteration in CRC, facilitating the identification of potential microbial biomarkers for diagnosis and prognosis of CRC.
 
@@ -872,55 +882,46 @@
 
             \begin{figure}[p]
                 \centering
-                \includegraphics[width=0.6 \linewidth]{Figures/CRC/Figure_1.png}
+                \includegraphics[width=0.6 \linewidth]{Figures/CRC/Figure_01.png}
                 \caption[Gut microbiome compositions in genus level]{\textbf{Gut microbiome compositions in genus level.}\\
                     Taxa were sorted from the most prevalent taxon to the least prevalent taxon. CRC patients were sorted by the most prevalent taxon in descending order. \textbf{(a)} Bacteria kingdom \textbf{(b)} Eukaryota kingdom \textbf{(c)} Fungi kingdom \textbf{(d)} Viruses kingdom}
-                \label{fig:CRC-composition-genus}
+                \label{fig:CRC-composition}
             \end{figure}
             \clearpage
 
             \begin{figure}[p]
                 \centering
-                \includegraphics[width=0.6 \linewidth]{Figures/CRC/Figure_2.png}
-                \caption[Gut microbiome compositions in species level]{\textbf{Gut microbiome compositions in species level.}\\
-                    Taxa were sorted from the most prevalent taxon to the least prevalent taxon. CRC patients were sorted by the most prevalent taxon in descending order. \textbf{(a)} Bacteria kingdom \textbf{(b)} Eukaryota kingdom \textbf{(c)} Fungi kingdom \textbf{(d)} Viruses kingdom}
-                \label{fig:CRC-composition-species}
-            \end{figure}
-            \clearpage
-
-            \begin{figure}[p]
-                \centering
-                \includegraphics[width=\linewidth]{Figures/CRC/Figure_3.pdf}
+                \includegraphics[width=\linewidth]{Figures/CRC/Figure_02.pdf}
                 \caption[Alpha-diversity indices in genus level]{\textbf{Alpha-diversity indices in genus level.}\\
                     \textbf{(a)} Berger-Parker $d$ \textbf{(b)} Chao1 \textbf{(c)} Dominance \textbf{(d)} Doubles \textbf{(e)} Fisher $\alpha$ \textbf{(f)} Good's coverage \textbf{(g)} Margalef \textbf{(h)} Mcintosh \textbf{(i)} Observed features \textbf{(j)} Simpson $d$ \textbf{(k)} Singles \textbf{(l)} Strong. MWU test: $p < 0.05$ (*), $p < 0.01$ (**), $p < 0.001$ (***), and $p < 0.0001$ (****)}
-                \label{fig:CRC-alpha-genus}
+                \label{fig:CRC-alpha}
             \end{figure}
             \clearpage
 
             \begin{figure}[p]
                 \centering
-                \includegraphics[width=\linewidth]{Figures/CRC/Figure_4.pdf}
-                \caption[Alpha-diversity indices in species level]{\textbf{Alpha-diversity indices in species level.}\\
-                    \textbf{(a)} Berger-Parker $d$ \textbf{(b)} Chao1 \textbf{(c)} Dominance \textbf{(d)} Doubles \textbf{(e)} Fisher $\alpha$ \textbf{(f)} Good's coverage \textbf{(g)} Margalef \textbf{(h)} Mcintosh \textbf{(i)} Observed features \textbf{(j)} Simpson $d$ \textbf{(k)} Singles \textbf{(l)} Strong. MWU test: $p < 0.05$ (*), $p < 0.01$ (**), $p < 0.001$ (***), and $p < 0.0001$ (****)}
-                \label{fig:CRC-alpha-species}
-            \end{figure}
-            \clearpage
-
-            \begin{figure}[p]
-                \centering
-                \includegraphics[width=\linewidth]{Figures/CRC/Figure_5.pdf}
+                \includegraphics[width=\linewidth]{Figures/CRC/Figure_03.pdf}
                 \caption[Alpha-diversity indices with recurrence in genus level]{\textbf{Alpha-diversity indices with recurrence in genus level.}\\
                     \textbf{(a)} Berger-Parker $d$ \textbf{(b)} Chao1 \textbf{(c)} Dominance \textbf{(d)} Doubles \textbf{(e)} Fisher $\alpha$ \textbf{(f)} Good's coverage \textbf{(g)} Margalef \textbf{(h)} Mcintosh \textbf{(i)} Observed features \textbf{(j)} Simpson $d$ \textbf{(k)} Singles \textbf{(l)} Strong. MWU test: $p < 0.05$ (*), $p < 0.01$ (**), $p < 0.001$ (***), and $p < 0.0001$ (****)}
-                \label{fig:CRC-alpha-recurrence-genus}
+                \label{fig:CRC-alpha-recurrence}
             \end{figure}
             \clearpage
 
             \begin{figure}[p]
                 \centering
-                \includegraphics[width=\linewidth]{Figures/CRC/Figure_6.pdf}
-                \caption[Alpha-diversity indices with recurrence in species level]{\textbf{Alpha-diversity indices with recurrence in species level.}\\
-                    \textbf{(a)} Berger-Parker $d$ \textbf{(b)} Chao1 \textbf{(c)} Dominance \textbf{(d)} Doubles \textbf{(e)} Fisher $\alpha$ \textbf{(f)} Good's coverage \textbf{(g)} Margalef \textbf{(h)} Mcintosh \textbf{(i)} Observed features \textbf{(j)} Simpson $d$ \textbf{(k)} Singles \textbf{(l)} Strong. MWU test: $p < 0.05$ (*), $p < 0.01$ (**), $p < 0.001$ (***), and $p < 0.0001$ (****)}
-                \label{fig:CRC-alpha-recurrence-species}
+                \includegraphics[width=\linewidth]{Figures/CRC/Figure_04.pdf}
+                \caption[Beta-diversity indices in genus level]{\textbf{Beta-diversity indices in genus level}.\\
+                    Beta-diversity indices were visualized using a tSNE-transformed plot. The confidence ellipses are shown to display the distribution of each sub-group. \textbf{(a)} Bray-Curtis \textbf{(b)} Canberra \textbf{(c)} Cosine \textbf{(d)} Hamming \textbf{(e)} Jaccard \textbf{(f)} Sokal-Sneath. Statistical significance were determined by PERMANOVA test.}
+                \label{fig:CRC-beta}
+            \end{figure}
+            \clearpage
+
+            \begin{figure}[p]
+                \centering
+                \includegraphics[width=\linewidth]{Figures/CRC/Figure_05.pdf}
+                \caption[Beta-diversity indices with recurrence in genus level]{\textbf{Beta-diversity indices with recurrence in genus level}.\\
+                    Beta-diversity indices were visualized using a tSNE-transformed plot. The confidence ellipses are shown to display the distribution of each sub-group. \textbf{(a)} Bray-Curtis \textbf{(b)} Canberra \textbf{(c)} Cosine \textbf{(d)} Hamming \textbf{(e)} Jaccard \textbf{(f)} Sokal-Sneath. Statistical significance were determined by PERMANOVA test.}
+                \label{fig:CRC-beta-recurrence}
             \end{figure}
             \clearpage
         \clearpage
