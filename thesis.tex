@@ -167,29 +167,31 @@
 \clearpage
 
 %%% Table of Contents
+\pagenumbering{roman}
 \tableofcontents{}
-\thispagestyle{empty}
+%\thispagestyle{empty}
 \vfill
 \clearpage
 
 %%% List of Figures
 \listoffigures{}
-\thispagestyle{empty}
+%\thispagestyle{empty}
 \clearpage
 
 %%% List of Tables
 \listoftables{}
-\thispagestyle{empty}
+%\thispagestyle{empty}
 \clearpage
 
 %%% reset page numbering
-\setcounter{page}{1}
 %  Do not touch the above 20 lines
 
     \section*{\centering List of Abbreviations}
         \printacronyms[display=all, heading=none]
     \newpage
 
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
     \section{Introduction}
         The microbiome refers to the complex community of microorganisms, including bacteria, viruses, fungi, and other microbes, that inhabit various environment within living organisms \cite{microbiome-1, microbiome-3}. In humans, the microbiome plays a crucial role in maintaining health \cite{microbiome-2}, influencing processes such as digestion \cite{microbiome-digestion-1}, immune response \cite{microbiome-immune-1, microbiome-immune-2, microbiome-immune-3}, and even mental health \cite{microbiome-mental-1, microbiome-mental-2, microbiome-mental-3}. These microbial communities are not static nor constant, but rather dynamic ecosystem that interacts with their host and respond to environmental changes. Recent studies have revealed that imbalances in the microbiome, known as dysbiosis, can contribute to a wide range of diseases, including obesity \cite{microbiome-obesity-1, microbiome-obesity-2, microbiome-obesity-3}, diabetes \cite{microbiome-diabetes-1, microbiome-diabetes-2, microbiome-diabetes-3}, infections \cite{microbiome-infection-1, microbiome-infection-2}, inflammatory conditions \cite{microbiome-inflammation-1, microbiome-inflammation-2, microbiome-inflammation-3}, and cancers \cite{microbiome-cancer-1, microbiome-cancer-2, microbiome-cancer-3, microbiome-cancer-4}. Thus, understanding the composition of the human microbiomes is essential for developing new therapeutic approaches that target these microbial populations to promote health and prevent diseases.
 
@@ -872,7 +874,7 @@
             \subsubsection{Gut microbiome compositions}
             \subsubsection{Diversity indices}
             \subsubsection{DAT selection}
-            \subsubsection{Pathway prediction}
+            \subsubsection{ML prediction}
 
             \begin{table}[p]
                 \caption{Clinical characteristics of CRC study participants}
@@ -910,6 +912,15 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/CRC/Figure_04.pdf}
+                \caption[Alpha-diversity indices with OS in genus level]{\textbf{Alpha-diversity indices with OS in genus level.}\\
+                    \textbf{(a)} Berger-Parker $d$ \textbf{(b)} Chao1 \textbf{(c)} Dominance \textbf{(d)} Doubles \textbf{(e)} Fisher $\alpha$ \textbf{(f)} Good's coverage \textbf{(g)} Margalef \textbf{(h)} Mcintosh \textbf{(i)} Observed features \textbf{(j)} Simpson $d$ \textbf{(k)} Singles \textbf{(l)} Strong. Statistical significance was calculated by the Spearman correlation.}
+                \label{fig:CRC-alpha-OS}
+            \end{figure}
+            \clearpage
+
+            \begin{figure}[p]
+                \centering
+                \includegraphics[width=\linewidth]{Figures/CRC/Figure_05.pdf}
                 \caption[Beta-diversity indices in genus level]{\textbf{Beta-diversity indices in genus level}.\\
                     Beta-diversity indices were visualized using a tSNE-transformed plot. The confidence ellipses are shown to display the distribution of each sub-group. \textbf{(a)} Bray-Curtis \textbf{(b)} Canberra \textbf{(c)} Cosine \textbf{(d)} Hamming \textbf{(e)} Jaccard \textbf{(f)} Sokal-Sneath. Statistical significance were determined by PERMANOVA test.}
                 \label{fig:CRC-beta}
@@ -918,10 +929,43 @@
 
             \begin{figure}[p]
                 \centering
-                \includegraphics[width=\linewidth]{Figures/CRC/Figure_05.pdf}
+                \includegraphics[width=\linewidth]{Figures/CRC/Figure_06.pdf}
                 \caption[Beta-diversity indices with recurrence in genus level]{\textbf{Beta-diversity indices with recurrence in genus level}.\\
                     Beta-diversity indices were visualized using a tSNE-transformed plot. The confidence ellipses are shown to display the distribution of each sub-group. \textbf{(a)} Bray-Curtis \textbf{(b)} Canberra \textbf{(c)} Cosine \textbf{(d)} Hamming \textbf{(e)} Jaccard \textbf{(f)} Sokal-Sneath. Statistical significance were determined by PERMANOVA test.}
                 \label{fig:CRC-beta-recurrence}
+            \end{figure}
+            \clearpage
+
+            \begin{figure}[p]
+                \centering
+                \includegraphics[width=\linewidth]{Figures/CRC/Figure_07.pdf}
+                \caption[Beta-diversity indices with recurrence in genus level]{text\textbf{Beta-diversity indices with OS in genus level.}\\
+                }
+                \label{fig:CRC-beta-OS}
+            \end{figure}
+            \clearpage
+
+            \begin{figure}[p]
+                \centering
+                \includegraphics[width=\linewidth]{Figures/CRC/Figure_08.pdf}
+                \caption[DAT with recurrence in genus level]{\textbf{DAT with recurrence in genus level.}\\
+                }
+                \label{fig:CRC-DAT-recurrence}
+            \end{figure}
+            \clearpage
+
+            \begin{figure}[p]
+                \centering
+                \includegraphics[width=\linewidth]{Figures/CRC/Figure_09.pdf}
+                \caption[DAT with OS in genus level]{as\textbf{DAT with OS in genus level.}\\
+                }
+                \label{fig:CRC-DAT-OS}
+            \end{figure}
+            \clearpage
+
+            \begin{figure}[p]
+                \centering
+                \caption{\textbf{ML prediction.}}
             \end{figure}
             \clearpage
         \clearpage
@@ -948,7 +992,7 @@
     \section*{\hfill \Large Acknowledgments \hfill}
         I would like to disclose my earnest appreciation for my advisor, Professor \textbf{Semin Lee}, who provided solicitous supervision and cherished opportunities throughout the course of my research. His advice and consultation encouraged me to become as a researcher and to receive all humility and gentleness. I am also grateful to all of my committee members, Professor \textbf{Taejoon Kwon}, Professor \textbf{Eunhee Kim}, Professor \textbf{Kyemyung Park}, and Professor \textbf{Min Hyuk Lim}, for their meaningful mentions and suggestions.
 
-        I extend my deepest gratitude to my Lord, \textit{the Flying Spaghetti Monster}, His Noodly Appendage has guided me through the twist and turns of this academic journey. His presence, ever comforting and mysterious, has been a source of strength and humor during both highs and lows. In moments of doubt, I found solace in the belief that you were there, gently reminding me to keep faith in the process. His Holy Noodle has nourished my mind, and for that, I am truly overwhelmed. May His Holy Noodle continue to guide me in all my future endeavors. \textit{R'Amen}.
+        I extend my deepest gratitude to my Lord, \textbf{the Flying Spaghetti Monster}, His Noodly Appendage has guided me through the twist and turns of this academic journey. His presence, ever comforting and mysterious, has been a source of strength and humor during both highs and lows. In moments of doubt, I found solace in the belief that you were there, gently reminding me to keep faith in the process. His Holy Noodle has nourished my mind, and for that, I am truly overwhelmed. May His Holy Noodle continue to guide me in all my future endeavors. \textit{R'Amen}.
 
         I would like to extend my heartfelt gratitude to Professor \textbf{You Mi Hong} for her invaluable guidance and insightful advice on PTB study. Hex expertise in maternal and fetal health, along with her deep understanding of statistical and clinical interpretations, greatly contributed to refining the analytical framework of this study. Her constructive feedback and thoughtful discussions provided critical perspectives that enhanced the robustness and relevance of the research findings. I sincerely appreciate her generosity in sharing her knowledge and effort, as well as her encouragement throughout my Ph.D. journey. Her support has been instrumental in strengthening this work, and I am truly grateful for her contributions.
 
