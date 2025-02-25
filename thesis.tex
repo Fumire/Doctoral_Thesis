@@ -213,6 +213,8 @@
 
         The receiver-operating characteristics (ROC) curve is a graphical representation used to evaluate the performance of a classification model by plotting the sensitivity against (1-specificity) at multiple threshold setting \cite{classification-evaluation-2, classification-evaluation-3, classification-evaluation-4}. The ROC curve illustrates the trade-off between detecting true positives while minimizing false positives, suggesting determining the optimal decision threshold for classification. A key metric derived from the ROC curve is the area-under-curve (AUC), which quantifies overall ability of the classification model to discriminate between positive and negative predictions. An AUC value of 0.5 indicates a model performing no better than random chance, while value closer to 1.0 suggests high predictive accuracy. Thus, by analyzing the AUC value of the ROC curve, researchers can compare different models and select the better classification model that offers the best balance between sensitivity and specificity for a given application.
 
+        Regression is a powerful predictive machine learning approach used to analyze complex relationships between variables and make continuous value predictions \cite{regression-1, regression-2}. Beside classification, which assigns discrete labels, regression models estimate numerical outcomes based on input features, making them particularly useful in biological research and clinical applications for predicting disease risk, patient outcomes, and biomarker selection. By leveraging high-throughput biological techniques and clinical information, regression model enables the discovery of hidden patterns and the development of precision medicine strategies. As computational methods advance, integrating regression models with metagenomic data can improve predictive accuracy and facilitate data-driven therapeutic guide in healthcare.
+
         This dissertation present a comprehensive, multi-disease human microbiome analysis, bridging the association between preterm birth (PTB) (Section \ref{section:PTB}), periodontitis (Section \ref{section:Periodontitis}), and colorectal cancer (CRC) (Section \ref{section:CRC}) through a unified metagenomic approach. While previous studies have examined the role and characteristics of human microbiome in these diseases individually, this dissertation uniquely integrates human microbiome-driven insights across these diseases to identify shared and disease-specific microbial signatures. By applying high-throughput metagenomic sequencing, microbial diversity analysis, and advanced bioinformatics techniques, this dissertation aims to uncover novel microbiome-based biomarkers and mechanistic insights into how microbial communities influence these conditions. These findings contribute to a broader understanding of microbiome-mediated disease interactions and pave the way for personalized medicine strategies, including microbiome-targeted diagnostics and therapeutics.
 
         \begin{table}[p]
@@ -947,25 +949,31 @@
 
             \begin{figure}[p]
                 \centering
-                \includegraphics[width=\linewidth]{Figures/CRC/Figure_08.pdf}
+                \includegraphics[width=\linewidth]{Figures/CRC/Figure_08.png}
                 \caption[DAT with recurrence in genus level]{\textbf{DAT with recurrence in genus level.}\\
-                    \textbf{(a-c)} Volcano plots with recurrence. $x$-axis indicates $\log_2 (\textrm{Fold Change})$ on recurrence, and $y$-axis indicates ANCOM significance (W). \textbf{(a)} Total \textbf{(b)} Normal samples \textbf{(c)} Tumor samples. \textbf{(d-i)} Violin plots of each taxon proportion with recurrence. \textbf{(d)} \textit{Corynebacterium} genus \textbf{(e)} \textit{Cutibacterium} genus \textbf{(f)} \textit{Gardnerella} genus \textbf{(g)} \textit{Hydrocarboniphaga} genus \textbf{(h)} \textit{Micrococcus} genus \textbf{(i)} \textit{Pseudocardia} genus. MWU test: $p < 0.05$ (*), $p < 0.01$ (**), $p < 0.001$ (***), and $p < 0.0001$ (****)}
+                    \textbf{(a-c)} Volcano plots with recurrence. $x$-axis indicates $\log_2 (\textrm{Fold Change})$ on recurrence, and $y$-axis indicates ANCOM significance (W). \textbf{(a)} Total \textbf{(b)} Normal samples \textbf{(c)} Tumor samples. \textbf{(d-i)} Violin plots of each taxon proportion with recurrence. \textbf{(d)} \textit{Micrococcus aloeverae} \textbf{(e)} \textit{Micrococcus} sp. \textit{CH3} \textbf{(f)} \textit{Micrococcus} sp. \textit{CH7} \textbf{(g)} \textit{Micrococcus} sp. \textit{HMSC31B01} \textbf{(h)} \textit{Micrococcus} sp. \textit{MS-ASIII-49} \textbf{(i)} \textit{Pseudomonas} sp. \textit{NBRC 111133}. MWU test: $p < 0.05$ (*), $p < 0.01$ (**), $p < 0.001$ (***), and $p < 0.0001$ (****)}
                 \label{fig:CRC-DAT-recurrence}
             \end{figure}
             \clearpage
 
             \begin{figure}[p]
                 \centering
-                \includegraphics[width=0.9 \linewidth]{Figures/CRC/Figure_09.pdf}
+                \includegraphics[width=0.8 \linewidth]{Figures/CRC/Figure_09.png}
                 \caption[DAT with OS in genus level]{\textbf{DAT with OS in genus level.}\\
-                    \textbf{(a-c)} Volcano plots with OS. $x$-axis indicates Spearman correlation coefficient ($r$), and $y$-axis indicates $\log_{10} (| \textrm{slope} |)$. \textbf{(a)} Total \textbf{(b)} Normal samples \textbf{(c)} Tumor samples. \textbf{(d-l)} Scatter plots of each taxon proportion with OS. \textbf{(d)} \textit{Alcaligenes} genus \textbf{(e)} \textit{Catabacter} genus \textbf{(f)} \textit{Enorma} genus \textbf{(g)} \textit{Kineothrix} genus \textbf{(h)} \textit{Lampropedia} genus \textbf{(i)} \textit{Methylorubrum} genus \textbf{(j)} \textit{Rodentibacter} genus \textbf{(k)} \textit{Turicibacter} genus \textbf{(l)} \textit{Weeksella} genus. Statistical significance were calculated with Spearman correlation ($r$ and $p$).}
+                    \textbf{(a-c)} Volcano plots with OS. $x$-axis indicates Spearman correlation coefficient ($r$), and $y$-axis indicates $\log_{10} (| \textrm{slope} |)$. \textbf{(a)} Total \textbf{(b)} Normal samples \textbf{(c)} Tumor samples. \textbf{(d-l)} Scatter plots of each taxon proportion with OS. \textbf{(d)} \textit{Agaricus bisporus} \textbf{(e)} \textit{Corynebacterium jeikeium} \textbf{(f)} \textit{Corynebacterium kroppenstedtii} \textbf{(g)} \textit{Corynebacterium lowii} \textbf{(h)} \textit{Kocuria flava} \textbf{(i)} \textit{Paracoccus sphaerophysae} \textbf{(j)} \textit{Propionibacterium virus Stormborn} \textbf{(k)} \textit{Sphingomonas phyllosphaerae} \textbf{(l)} \textit{Staphylococcus phage StB20-like}. Statistical significance were calculated with Spearman correlation ($r$ and $p$).}
                 \label{fig:CRC-DAT-OS}
             \end{figure}
             \clearpage
 
             \begin{figure}[p]
                 \centering
-                \caption{\textbf{ML prediction.}}
+                \caption{\textbf{ML classification.}}
+            \end{figure}
+            \clearpage
+
+            \begin{figure}[p]
+                \centering
+                \caption{\textbf{ML regression.}}
             \end{figure}
             \clearpage
         \clearpage
