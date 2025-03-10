@@ -386,7 +386,7 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/PTB/FigS2-PROM.pdf}
-                \caption[PROM-related DAT]{\textbf{PROM-related DAT}. \\
+                \caption[PROM-related DAT between FTB and PTB]{\textbf{PROM-related DAT between FTB and PTB.} \\
                     Only seven of these 42 PROM-related DAT overlapped with PTB-related DAT (bold text). Blue dots represented PROM-underrepresented DAT, while red dots represented PROM-overrepresented DAT.}
                 \label{fig:PTB-volcano}
             \end{figure}
@@ -426,7 +426,7 @@
 
             For the objective of diagnosing periodontitis, previous research has developed machine learning-based prediction models based on oral microbiome compositions, such as the sub-gingival microbial dysbiosis index \cite{Periodontitis-diagnosis-6, Periodontitis-diagnosis-7}, which have demonstrated good diagnostic evaluation and could be applied to individual saliva collection. Despite offering valuable details, these indicators are frequently restricted by their limited emphasis on classifying the multiple severities of periodontitis. Furthermore, many of these machine learning models currently in practice are trained solely upon the existence of periodontitis rather than on the multiple severities of periodontitis.
 
-            Recently, we employed multiplex quantitative-PCR (qPCR) and machine learning-based classification model to predict the severity of periodontitis based on the amount of nine pathogens of periodontitis from saliva collections \cite{Periodontitis-diagnosis-8}. On the other hand, the fact that we focused merely at nine pathogens for periodontitis and neglected the variety bacterial species associated to the various severities of periodontitis constrained the breadth of our investigation. By developing a machine learning model that could classify multiple severities of periodontitis based on the salivary microbiome composition, this study aims to fill these knowledge gaps and produce more accurate and therapeutically useful guidance to evaluate progression of periodontitis. Hence, in order to examine the salivary microbiome composition of both healthy controls and patients with periodontitis in multiple stages, we applied 16S rRNA gene sequencing. Furthermore, employing the 2018 classification criteria, we sought to find biomarkers (species) for the precise prediction of periodontitis severities \cite{Periodontitis-4, Periodontitis-13}.
+            Recently, we employed multiplex quantitative-PCR (qPCR) and machine learning-based classification model to predict the severity of periodontitis based on the amount of nine pathogens of periodontitis from saliva collections \cite{Periodontitis-diagnosis-8}. On the other hand, the fact that we focused merely at nine pathogens for periodontitis and neglected the variety bacterial species associated to the various severities of periodontitis constrained the breadth of our investigation. By developing a machine learning model that could classify multiple severities of periodontitis based on the salivary microbiome composition, this study aims to fill these knowledge gaps and produce more accurate and therapeutically useful guidance to evaluate progression of periodontitis. Hence, in order to examine the salivary microbiome composition of both healthy controls and patients with periodontitis in multiple stages, we applied 16S rRNA gene sequencing. Furthermore, employing the 2018 classification criteria, we sought to find biomarkers (bacterial species) for the precise prediction of periodontitis severities \cite{Periodontitis-4, Periodontitis-13}.
         \newpage
 
         \subsection{Materials and methods}
@@ -462,7 +462,7 @@
 
                 The arithmetic average of the gingival indices collected from every tooth was determined to calculate gingival index of each study participant. The relevant data was not displayed, despite that furcation involvement and bleeding on probing were thoroughly utilized into account during the diagnosis process.
 
-                Periodontitis was diagnosed in respect to the 2018 classification criteria  \cite{Periodontitis-4, Periodontitis-13}. An experienced periodontist diagnosed the periodontitis severity by considering complexity, depending on clinical examinations including radiographic images and periodontal probing. Periodontitis is categorized into healthy, stage I, stage II, and stage III with the following criteria:
+                Periodontitis was diagnosed in respect to the 2018 classification criteria for periodontitis \cite{Periodontitis-4, Periodontitis-13}. An experienced periodontist diagnosed the periodontitis severity by considering complexity, depending on clinical examinations including radiographic images and periodontal probing. Periodontitis is categorized into healthy, stage I, stage II, and stage III with the following criteria:
                 \begin{itemize}
                     \item Healthy:
                     \begin{enumerate}
@@ -501,7 +501,7 @@
                     \item Reverse: \texttt{5'-GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAGGACTACHVGGGTATCTAATCC-3'}
                 \end{itemize}
 
-                The standard protocols of the Illumina 16S Metagenomic Sequencing Library Preparation were followed in the preparation of the libraries.The PCR conditions were as follows:
+                The standard protocols of the Illumina 16S Metagenomic Sequencing Library Preparation were followed in the preparation of the libraries. The PCR conditions were as follows:
                 \begin{enumerate}
                     \item Heat activation for 30 seconds at 95 \textcelsius.
                     \item 25 cycles for 30 seconds at 95 \textcelsius.
@@ -650,7 +650,7 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_1.pdf}
-                \caption[Diversity indices]{\textbf{Diversity indices}. \\
+                \caption[Diversity indices for periodontitis]{\textbf{Diversity indices for periodontitis.}\\
                     Alpha-diversity indices \textbf{(a-e)} indicate that healthy controls have increased heterogeneity than periodontitis stages as measured by: \textbf{(a)} ACE \textbf{(b)} Chao1 \textbf{(c)} Fisher alpha \textbf{(d)} Margalef, and \textbf{(e)} observed ASVs. \textbf{(f)} The beta-diversity index (weighted UniFrac) was visualized using a tSNE-transformed plot. The confidence ellipses are shown to display the distribution of each periodontitis stage. The distance to each stage demonstrated that each periodontitis stage was distinguished from the other periodontitis stages: \textbf{(g)} distance to Healthy \textbf{(h)} distance to Stage I \textbf{(i)} distance to Stage II, and \textbf{(j)} distance to Stage III. Statistical significance determined by the MWU test and the PERMANOVA test: $p < 0.05$ (*), $p < 0.01$ (**), $p < 0.001$ (***), and $p \le 0.0001$ (****).}
                 \label{fig:Periodontitis-diversity}
             \end{figure}
@@ -659,7 +659,7 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_2.pdf}
-                \caption[Differentially abundant taxa (DAT)]{\textbf{Differentially abundant taxa (DAT)}. \\
+                \caption[DAT for periodontitis]{\textbf{DAT for periodontitis.}\\
                     DAT that were identified by ANCOM. \textbf{(a)} Heatmap of clustered DAT with similar distribution among subjects. Group 1, Group 2, and Group 3 are marked in red, black, and green, respectively. \textbf{(b)} Box plots showing the proportions of DAT. Taxa were sorted by their importance according to ANCOM.}
                 \label{fig:Periodontitis-DAT}
             \end{figure}
@@ -668,7 +668,7 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_3.pdf}
-                \caption[Correlation heatmap]{\textbf{Correlation heatmap}. \\
+                \caption[Correlation heatmap between periodontitis DAT]{\textbf{Correlation heatmap between periodontitis DAT.} \\
                     Pearson's correlations between DAT in healthy status and periodontitis stages. Statistical significance was determined by strong correlation, i.e., $| \textrm{coefficient} | \ge 0.5$ (*).}
                 \label{fig:Periodontitis-correlation}
             \end{figure}
@@ -677,7 +677,7 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_4.pdf}
-                \caption[Random forest classification metrics]{\textbf{Random forest classification metrics}. \\
+                \caption[Random forest classification metrics for periodontitis prediction]{\textbf{Random forest classification metrics for periodontitis prediction.}\\
                     The classification metrics in the random forest classifications were as follows: ACC, AUC, BA, F1, PRE, SEN, and SPE. \textbf{(a)} Classification performance for healthy vs. stage I vs. stage II vs. stage III. \textbf{(b)} ROC curve for the highest BA of (a). \textbf{(c)} Classification performance for healthy vs. stage I. \textbf{(d)} ROC curve on the highest BA of (c). (\textbf{e)} Classification performance for healthy vs. stage I vs. stages II/III. \textbf{(f)} ROC curve for the highest BA of (e). \textbf{(g)} Classification performance for healthy vs. stages I/II/III. \textbf{(h)} ROC curve for the highest BA of (h).}
                 \label{fig:Periodontitis-ML}
             \end{figure}
@@ -713,7 +713,7 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_S3.pdf}
-                \caption[Correlation plots for differentially abundant taxa]{\textbf{Correlation plots for differentially abundant taxa}. \\
+                \caption[Correlation plots for periodontitis DAT]{\textbf{Correlation plots for periodontitis DAT.}\\
                     We selected the combinations of DAT with absolute Spearman correlation coefficients greater than 0.5. The color represents periodontal healthy periodontal statuses (green: healthy, cyan: stage I, yellow: stage II, and red: stage III).}
                 \label{fig:Periodontitis-correlation2}
             \end{figure}
@@ -740,7 +740,7 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=0.9 \linewidth]{Figures/Periodontitis/Figure_R04.pdf}
-                \caption[Proportion of DAT]{\textbf{Proportion of DAT}. \\
+                \caption[Proportions of periodontitis DAT]{\textbf{Proportions of periodontitis DAT}. \\
                     \textbf{(a)} \textit{Actinomyces graevenitzii} \textbf{(b)} \textit{Actinomyces} spp. \textbf{(c)} \textit{Campylobacter showae} \textbf{(d)} \textit{Corynebacterium durum} \textbf{(e)} \textit{Filifactor alocis} \textbf{(f)} \textit{Fretibacterium} spp. \textbf{(g)} \textit{Lachnospiraceae [G-8] bacterium HMT 500} \textbf{(h)} \textit{Mycoplasma faucium} \textbf{(i)} \textit{Peptostreptococcaceae [XI][G-5] saphenum} \textbf{(j)} \textit{Peptostreptococcaceae [XI][G-6] nodatum} \textbf{(k)} \textit{Peptostreptococcaceae [XI][G-9] brachy} \textbf{(l)} \textit{Porphyromonas gingivalis} \textbf{(m)} \textit{Porphyromonas} sp. \textit{HMT 285} \textbf{(n)} \textit{Prevotella intermedia} \textbf{(o)} \textit{Prevotella} sp. \textit{HMT 304} \textbf{(p)} \textit{Prevotella} sp. \textit{HMT 526} \textbf{(q)} \textit{Tannerella forsythia} \textbf{(r)} \textit{Treponema putidum} \textbf{(s)} \textit{Treponema} sp. \textit{HMT 260} \textbf{(t)} \textit{Treponema} spp. Statistical significance determined by the MWU test: $p \ge 0.05$ (ns), $p < 0.05$ (*), $p < 0.01$ (**), $p < 0.001$ (***), and $p < 0.0001$ (****).}
                 \label{fig:Periodontitis-proportions}
             \end{figure}
@@ -767,7 +767,7 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/Periodontitis/Figure_R09.pdf}
-                \caption[Gradient Boosting classification metrics]{\textbf{Gradient Boosting classification metrics}. \\
+                \caption[Gradient Boosting classification metrics for periodontitis prediction]{\textbf{Gradient Boosting classification metrics for periodontitis prediction.} \\
                     The classification metrics in the random forest classifications were as follows: ACC, AUC, BA, F1, PRE, SEN, and SPE. The feature counts mean that the classification model trained on the most important $n$ features as the Table \ref{tab:Periodontitis-DAT}. \textbf{(a)} Comparison of Random forest (RF) and Gradient boosting (GB) for healthy vs. stage I vs. stage II vs. stage III. \textbf{(b)} Comparison of RF and GB for the highest BA of (a). \textbf{(c)} Classification performance for healthy vs. stage I. \textbf{(d)} Comparison of RF and GB for healthy vs. stage I vs. stages II/III. \textbf{(e)} Comparison of RF and GB for the highest BA of (d). \textbf{(f)} Comparison of RF and GB for Healthy vs. Stage I vs. Stages II/III. \textbf{(g)} Classification performance for healthy vs. stages I/II/III. \textbf{(h)} Comparison of RF and GB for Healthy vs. Stages I/II/III. MWU test: $p \ge 0.05$ (ns)}
                 \label{fig:Periodontitis-GB}
             \end{figure}
