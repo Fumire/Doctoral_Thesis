@@ -200,6 +200,8 @@
 
         16S ribosomal RNA (rRNA) gene sequencing is one of the most extensively applied methods for characterizing microbial communities by targeting the conserved 16S rRNA gene, which contains both highly conserved and variable regions in bacteria \cite{16S-1, 16S-2}. The conserved regions enable universal primer binding, while the variable regions provide the specificity needed to differentiate microbial taxa. Among these regions, the V3-V4 region is frequently selected for sequencing due to its balance between phylogenetic resolution and sequencing efficiency \cite{16S-3, 16S-4}. Therefore, the V3-V4 region offers sufficient variability to classify a wide range of bacteria taxa while maintaining compatibility with widely used sequencing platforms.
 
+        The Anna Karenina principle, originally derived from literature of Leo Tolstoy, has been applied to microbiome research to describe the manner that microbial communities in patients with diseases tend to be more variable and unstable compared to those in healthy individuals \cite{Anna-1, Anna-2}. This Anna Karenina principle suggests that while healthy microbiomes exhibit relatively stable and uniform compositions, while disease-associated microbiomes become highly dysregulated due to various environmental, genetic, and pathological influences. Dysbiosis-driven mechanisms, such as inflammation, genotoxic metabolic production, and immune modulation, can contribute pathogenesis and progression of diseases, including periodontitis. In the context of  cancer, this Anna Karenina principle suggests that gut microbiome dysbiosis does not follow a single uniform pattern in patients with CRC but rather presents as diverse and individualized disruption in microbial composition. This instability may play a role in field cancerization, where microbial alteration extend beyond the tumor site to adjacent normal-appearing tissues \cite{cancerization-1, cancerization-2}, potentially priming the tumor microenvironment for malignancy. Therefore, the high inter-individual variability in microbiome alteration across these disease supports the Anna Karenina principle, highlighting the complexity of dysbiosis-driven diseases and the necessity for personalized microbiome-based diagnostic and interventions. Investigating the shared and disease-specific microbial disruptions across these conditions may offer novel insights into microbiome-driven pathogenesis and therapeutic strategies.
+
         On the other hand, PathSeq is a computational pipeline designed for the identification and analysis of microbial sequences within short-read human sequencing data, such as next-generation sequencing \cite{PathSeq-1, PathSeq-2}. PathSeq's scalable and effective processing of massive amounts of sequencing data allows large-scale microbial profiling possible. PathSeq workflow consists of two main phases: a subtractive phase and an analytic phase. The subtractive phase is removing human-derived reads by aligning them to a human reference genome; and, the analytic phase is mapping remaining reads to microbial reference databases, not only bacterial reference genome, but also archaeal, fungal, and viral reference genomes. This approach allows for the comprehensive detection of microbiome compositions, without a requirement for targeted amplification. PathSeq presents a more comprehensive and objective evaluation of microbiome compositions than conventional microbiome profiling techniques including 16S rRNA gene sequencing, capturing an assortment of microbial species beyond bacteria. Therefore, PathSeq is an effective instrument for metagenomic research, infectious disease study, and microbiome analysis in environmental and clinical contexts because of its capacity to operate with complex sequencing datasets \cite{PathSeq-analysis-1, PathSeq-analysis-2, PathSeq-analysis-3}.
 
         Diversity indices are essential techniques for evaluating the complexity and variety of microbial communities,in ecological and microbiological research \cite{Diversity-1, Diversity-2}. Alpha-diversity index attributes to the heterogeneity within a specific community, obtaining the number of different taxa and the distribution of taxa among the individuals, \textit{i.e.}, richness and evenness. On the other hand, beta-diversity index measures the variations in microbiome compositions between the individuals, highlighting differences among the microbiome compositions of the study participants \cite{Diversity-3}. Altogether, by providing a thorough understanding of microbiome compositions, diversity indices, \textit{e.g.} alpha-diversity and beta-diversity, allow us to investigate factors that affecting community variability and structure.
@@ -331,14 +333,14 @@
 
                 DESeq2 was used to select 32 DAT that distinguish between the PTB and FTB groups out of the 465 species that were examined \cite{DESeq2-1}: 26 FTB-enriched DAT and six PTB-enriched DAT. Seven PROM-related DAT were removed from these 32 PTB-related DAT to lessen the confounding effect of PROM (Figure \ref{fig:PTB-volcano}). Therefore, there were a total of 25 PTB-related DAT: 22 FTB-enriched DAT and three PTB-enriched DAT (Figure \ref{fig:PTB-DAT}).
 
-                A significant negative correlation was found using Pearson correlation analysis between GW and differences between PTB-enriched DAT and FTB-enriched DAT ($r = \textrm{-}0.542$ and $p = 7.8\textrm{e-}6$; Figure \ref{fig:PTB-volcano}).
+                A significant negative correlation was found using Pearson correlation analysis between GW and differences between PTB-enriched DAT and FTB-enriched DAT (Pearson correlation $r = - 0.542$ and $p = 7.8\textrm{e-}6$; Figure \ref{fig:PTB-volcano}).
 
             \subsubsection{Random forest classification to predict PTB risk}
                 To classify PTB according to DAT, random forest classifiers were constructed. The nine most significant DAT were used to obtain the best BA (0.765$\pm$0.071; Figure \ref{fig:PTB-ML}a). Moreover, random forest classification model determined each DAT's importance (Figure \ref{fig:PTB-ML}b). We conducted a validation procedure on nine twin pregnancies that were excluded in the initial study design in order to confirm the reliability and dependability of our random forest-based PTB prediction model (Figure \ref{fig:PTB-validation}). Comparable to the PTB prediction model on the 59 initial singleton study participants, the validation classification on PTB risk of these twin participants have an accuracy of 87.5\%.
 
             \begin{table}[p]
                 \centering
-                \caption[Standard clinical information of study participants]{\textbf{Standard clinical information of study participants}. \\
+                \caption[Standard clinical information of PTB study participants]{\textbf{Standard clinical information of PTB study participants}. \\
                     Continuous variable for independent $t$-test. Categorical variable for Pearson's $\chi$-square test. Continuous variable: mean$\pm$SD. Categorical vaiable: count (proprotion)}
                     \input{Tables/PTB-clinical.tex}
                 \label{tab:PTB-clinical}
@@ -348,7 +350,7 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/PTB/Fig1-DAT.pdf}
-                \caption[DAT volcano plot]{\textbf{DAT volcano plot}. \\
+                \caption[DAT volcano plot for PTB prediction]{\textbf{DAT volcano plot for PTB prediction.} \\
                     Red dots represent PTB-enriched DAT, while green dots represent FTB-enriched DAT.}
                 \label{fig:PTB-DAT}
             \end{figure}
@@ -357,7 +359,7 @@
             \begin{figure}[p]
                 \centering
                 \includegraphics[width=\linewidth]{Figures/PTB/Fig2-Composition.pdf}
-                \caption[Salivary microbiome compositions over DAT]{\textbf{Salivary microbiome compositions over DAT}. \\
+                \caption[Salivary microbiome compositions over DAT for PTB prediction]{\textbf{Salivary microbiome compositions over DAT for PTB prediction.}\\
                     \textbf{(a)} Frequencies of DAT of study subjects. The study participants are arranged in respect of $(\textrm{PTB-enriched DAT} - \textrm{FTB-enriched DAT})$. The study participants' GA is displayed in accordance with the upper panel's order (PTB: red bar, FTB: green bar. PROM: arrow head.) \textbf{(b)} Correlation plot with GA and $(\textrm{PTB-enriched DAT} - \textrm{FTB-enriched DAT})$. Strong negative correlation is found with Pearson correlation.}
                 \label{fig:PTB-composition}
             \end{figure}
